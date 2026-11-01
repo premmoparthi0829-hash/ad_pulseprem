@@ -1,4 +1,4 @@
-"use import";
+"use client";
 import React from "react";
 
 interface LogoProps {
@@ -9,78 +9,56 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({
   theme = "light",
-  showBadge = false,
+  showBadge = true,
   className = "",
 }) => {
   const isDark = theme === "dark";
 
   return (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Geometric Dynamic Pulse Prism Icon */}
-      <div className="relative w-9 h-9 flex items-center justify-center shrink-0">
-        <svg
-          viewBox="0 0 36 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full transform hover:scale-105 transition-transform duration-300"
-        >
-          {/* Faceted geometric red prism symbol */}
-          <path
-            d="M4 18L18 4L24 10L10 24L4 18Z"
-            fill="#ED1B36"
-            className="transition-colors"
-          />
-          <path
-            d="M18 4L32 18L26 24L12 10L18 4Z"
-            fill="#650025"
-            opacity="0.9"
-          />
-          <path
-            d="M10 24L24 10L32 18L18 32L10 24Z"
-            fill="#ED1B36"
-            opacity="0.8"
-          />
-          <path
-            d="M14 20L20 14L22 16L16 22L14 20Z"
-            fill="#FFFFFF"
-          />
-        </svg>
-      </div>
+    <div className={`flex items-center gap-4 select-none ${className}`}>
+      {/* Solid Red Slanted Parallelogram (Signature Visual Geometry) */}
+      <div
+        className="w-11 h-7 sm:w-14 sm:h-8 bg-[#ED1B36] transition-transform duration-200 group-hover:scale-105 shadow-sm shrink-0"
+        style={{
+          transform: "skewX(-20deg)",
+        }}
+      />
 
       {/* Brand Typography */}
-      <div className="flex flex-col">
+      <div className="flex flex-col justify-center">
         <div className="flex items-center tracking-tight">
           <span
-            className={`text-xl font-extrabold tracking-tight font-heading ${
-              isDark ? "text-white" : "text-[#09082F]"
+            className={`text-xl sm:text-[22px] font-black tracking-tight font-heading leading-none ${
+              isDark ? "text-white" : "text-[#111827]"
             }`}
           >
-            AdPulse
+            AD PULSE
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#ED1B36] ml-0.5 mb-2 shrink-0 animate-pulse" />
         </div>
         <span
-          className={`text-[9px] font-bold tracking-[0.25em] uppercase -mt-1 font-heading ${
-            isDark ? "text-zinc-400" : "text-zinc-500"
+          className={`text-[9.5px] sm:text-[10px] font-bold tracking-[0.28em] uppercase font-heading ${
+            isDark ? "text-zinc-400" : "text-zinc-600"
           }`}
         >
-          Digital
+          digital
         </span>
       </div>
 
       {showBadge && (
-        <div className="hidden sm:flex items-center pl-3 border-l border-zinc-300/40 ml-1">
-          <div className="flex flex-col">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#ED1B36]">
-              10+ YEARS
+        <div className="hidden sm:flex items-center pl-4 border-l border-zinc-200 shrink-0 ml-1">
+          {/* 10 Years of Innovation Emblem */}
+          <div className="flex items-center gap-2">
+            <span className="text-2xl sm:text-3xl font-black font-heading text-[#111827] leading-none tracking-tighter">
+              10
             </span>
-            <span
-              className={`text-[8px] uppercase tracking-widest ${
-                isDark ? "text-zinc-400" : "text-zinc-500"
-              }`}
-            >
-              Enterprise IT
-            </span>
+            <div className="flex flex-col justify-center -space-y-0.5">
+              <span className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-zinc-500 leading-tight">
+                Years of
+              </span>
+              <span className="text-[8.5px] sm:text-[9.5px] font-black uppercase tracking-wider text-[#ED1B36] leading-tight">
+                AdPulse
+              </span>
+            </div>
           </div>
         </div>
       )}

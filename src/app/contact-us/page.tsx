@@ -121,7 +121,7 @@ export default function ContactUsPage() {
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      <main className="flex-1 w-full pt-[76px] sm:pt-[82px]">
+      <main className="flex-1 w-full pt-[90px]">
         {/* 
           ======================================================================
           02. HERO / CONTACT US TITLE SECTION (Screenshot 1 Exact Match)

@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Play, ExternalLink, X, CheckCircle2 } from "lucide-react";
+import { Play, ExternalLink, X, CheckCircle2 } from "lucide-react";
 
 interface StoryCard {
   id: string;
@@ -18,8 +18,10 @@ interface StoryCard {
 }
 
 export const SuccessStories: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<number>(0);
   const [selectedStory, setSelectedStory] = useState<StoryCard | null>(null);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  const [activeDot, setActiveDot] = useState<number>(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   // Set 1: Exact Match to Reference Screenshot with Ultra-HD Indian People & Racing Car
   const page1Stories: StoryCard[] = [
@@ -31,7 +33,7 @@ export const SuccessStories: React.FC = () => {
         "How a trusted partnership helped Hanab navigate an IT carve-out and build a scalable foundation for growth",
       authorName: "Rajesh Varma",
       authorRole: "IT Director, Hanab Group",
-      image: "/images/success-stories/card-1-indian-cio.jpg",
+      image: "/images/success-stories/story-card-1-rajesh-hd.jpg",
       quote:
         "AdPulse Digital provided the technical agility and strategic leadership necessary to execute our global carve-out without a single minute of operational downtime.",
       metrics: [
@@ -48,7 +50,7 @@ export const SuccessStories: React.FC = () => {
       type: "split-burgundy",
       headline: "Outpacing Change with Velocity 2.0",
       burgundyTitle: "Outpacing Change with Velocity 2.0",
-      image: "/images/success-stories/card-2-racecar.jpg",
+      image: "/images/success-stories/story-card-2-racecar-hd.jpg",
       quote:
         "Leveraging high-frequency telemetry streaming and predictive AI, our racing hypercars compute optimal regenerative braking strategies within milliseconds on the circuit.",
       metrics: [
@@ -66,7 +68,7 @@ export const SuccessStories: React.FC = () => {
         "Move Fast, Don't Break Things: Balancing AI Innovation with Clinical Continuity at Montefiore Einstein",
       authorName: "Deepesh Chandra",
       authorRole: "SVP & Chief Digital & Information Officer, Montefiore Einstein",
-      image: "/images/success-stories/card-3-deepesh.jpg",
+      image: "/images/success-stories/story-card-3-deepesh-hd.jpg",
       quote:
         "In healthcare, innovation must never come at the cost of clinical reliability. With AdPulse Digital, we accelerated generative AI adoption while safeguarding critical patient care pathways.",
       metrics: [
@@ -84,7 +86,7 @@ export const SuccessStories: React.FC = () => {
         "Inside the AI Vanguard: Security, Scale and the Future of Intelligence at Cisco",
       authorName: "Jeetu Patel",
       authorRole: "President and Chief Product Officer, Cisco",
-      image: "/images/success-stories/card-4-jeetu.jpg",
+      image: "/images/success-stories/story-card-4-jeetu-v5.jpg",
       quote:
         "Security cannot be an afterthought in enterprise AI—it must be woven into the fabric of every model, network packet, and collaborative interaction.",
       metrics: [
@@ -97,86 +99,127 @@ export const SuccessStories: React.FC = () => {
     },
   ];
 
-  // Set 2: Extended Enterprise Transformation Stories
+  // Set 2: Extended Enterprise Transformation Stories with Two Indian Women Leaders & Two Companies
   const page2Stories: StoryCard[] = [
     {
       id: "story-5",
-      badge: "CASE STUDY",
-      type: "interview",
+      badge: "VIDEO",
+      type: "video",
       headline:
-        "Autonomous Cloud FinOps: Driving 40% Infrastructure Efficiency for Tier-1 Banking Networks",
-      authorName: "Arjun Nair",
-      authorRole: "Chief Technology Officer, Axis Capital",
-      image: "/images/success-stories/card-1-indian-cio.jpg",
+        "Human-Centric Digital Agility: Scaling Global Luxury & Retail Ecosystems with Intelligent Automation",
+      authorName: "Leena Nair",
+      authorRole: "Global CEO, Chanel",
+      image: "/images/success-stories/story-card-5-leena-hd.jpg",
       quote:
-        "AdPulse Digital's automated workload re-architecting transformed our multi-cloud deployment into a lean, self-healing core.",
+        "True transformation harmonizes technological precision with collective human potential. AdPulse Digital's architectures empower our global teams to innovate with purpose and agility.",
       metrics: [
-        { label: "OpEx Reduction", value: "42%" },
-        { label: "Transaction Latency", value: "<4ms" },
+        { label: "Global Reach", value: "115+ Markets" },
+        { label: "Supply Velocity", value: "3.2x Faster" },
+        { label: "Talent Adoption", value: "98% Positive" },
       ],
       summary:
-        "A full-scale modernization of legacy core banking engines into resilient Kubernetes microservices across AWS, Azure, and on-premises sovereign datacenters.",
+        "Leena Nair explores how Chanel harmonized timeless heritage craftsmanship with cutting-edge supply-chain intelligence, predictive omnichannel clienteling, and sustainable global operations.",
     },
     {
       id: "story-6",
       badge: "CASE STUDY",
       type: "split-burgundy",
-      headline: "Scalable 5G Edge Infrastructure with AdPulse Apex",
-      burgundyTitle: "Scalable 5G Edge Infrastructure with AdPulse Apex",
-      image: "/images/success-stories/card-2-racecar.jpg",
+      headline: "Accelerating Net-Zero: Orchestrating Gigawatt-Scale Clean Energy Grids",
+      burgundyTitle: "Accelerating Net-Zero: 100% Clean Energy Grid Orchestration",
+      image: "/images/success-stories/story-card-7-sustainability-hd.jpg",
+      quote:
+        "Autonomous IoT micro-inverters and predictive battery storage algorithms stabilized power delivery across 12,000 square kilometers of renewable generation.",
       metrics: [
-        { label: "Edge Throughput", value: "100 Gbps" },
-        { label: "Latency", value: "Sub-1ms" },
+        { label: "Grid Capacity", value: "24 GW Clean Power" },
+        { label: "Carbon Abated", value: "18M Tons/Yr" },
+        { label: "Uptime Reliability", value: "99.998%" },
       ],
       summary:
-        "Deploying distributed micro-datacenters at cell towers to power real-time autonomous robotics and connected vehicle V2X communications.",
+        "AdPulse Digital engineered the telemetry backbone and AI dispatch core for one of the world's largest hybrid solar-wind renewable parks, dynamically predicting load swings and preventing blackouts.",
     },
     {
       id: "story-7",
-      badge: "VIDEO",
-      type: "video",
+      type: "interview",
       headline:
-        "Engineering India's Smart Supply Chain: Real-Time Predictive Logistics at Scale",
-      authorName: "Vikram Malhotra",
-      authorRole: "Executive Director, Titan Logistics",
-      image: "/images/success-stories/card-3-deepesh.jpg",
+        "Resilient Financial Systems: Harnessing Real-Time Macro-Telemetry and AI for Global Economic Stability",
+      authorName: "Gita Gopinath",
+      authorRole: "First Deputy Managing Director, International Monetary Fund",
+      image: "/images/success-stories/story-card-6-gita-hd.jpg",
       quote:
-        "Dynamic routing and automated load balancing saved millions of liters of fuel while improving delivery accuracy to 99.4%.",
+        "Modern economic policy demands high-velocity telemetry. AdPulse Digital helped architect institutional analytics pipelines capable of stress-testing cross-border liquidity in seconds.",
       metrics: [
-        { label: "Delivery Precision", value: "99.4%" },
-        { label: "Emissions Cut", value: "-28%" },
+        { label: "Global Coverage", value: "190+ Sovereign Markets" },
+        { label: "Model Latency", value: "<1.2s Real-Time" },
+        { label: "Forecasting Precision", value: "99.1%" },
       ],
       summary:
-        "Implementing an IoT sensor mesh and digital twin engine across 15,000 inter-state freight carriers in high-density corridors.",
+        "Gita Gopinath details how macro-prudential surveillance systems leverage distributed time-series computation to forecast systemic debt, supply shocks, and sovereign liquidity buffers across global markets.",
     },
     {
       id: "story-8",
-      type: "interview",
-      headline:
-        "Zero-Trust Cyber Resilience for Critical Infrastructure and Distributed Power Grids",
-      authorName: "Kavita Ramachandran",
-      authorRole: "Global Chief Information Security Officer, PowerGrid Corp",
-      image: "/images/success-stories/card-4-jeetu.jpg",
+      badge: "CASE STUDY",
+      type: "split-burgundy",
+      headline: "Next-Gen Sovereign AI Cloud & Hyperscale Datacenter Fabric",
+      burgundyTitle: "Next-Gen Sovereign AI Cloud & Hyperscale Fabric",
+      image: "/images/success-stories/story-card-8-architecture-hd.jpg",
       quote:
-        "Real-time behavioural telemetry enables us to isolate rogue firmware anomalies before they can propagate to regional substations.",
+        "Scaling high-density GPU clusters across decentralized enterprise hubs with automated thermal routing and sub-millisecond fabric latency.",
       metrics: [
-        { label: "Detection Speed", value: "Real-Time" },
-        { label: "Threat Neutralization", value: "100%" },
+        { label: "Compute Throughput", value: "1.2 ExaFLOPS" },
+        { label: "PUE Efficiency", value: "1.08 Industry-Best" },
+        { label: "Fabric Latency", value: "Sub-0.8µs" },
       ],
       summary:
-        "Protecting high-voltage national electrical transmission networks against state-sponsored APTs using quantum-safe cryptographic envelopes.",
+        "AdPulse Digital co-designed the high-throughput network fabric and carbon-neutral cooling management systems for a multinational tier-4 datacenter campus network.",
     },
   ];
 
-  const storySets = [page1Stories, page2Stories];
-  const activeStories = storySets[currentPage];
+  const allStories = [...page1Stories, ...page2Stories];
+  // Duplicate stories array to create a continuous, infinite auto-scrolling loop
+  const displayStories = [...allStories, ...allStories];
 
-  const handlePrev = () => {
-    setCurrentPage((prev) => (prev === 0 ? storySets.length - 1 : prev - 1));
-  };
+  useEffect(() => {
+    if (isPaused) return;
 
-  const handleNext = () => {
-    setCurrentPage((prev) => (prev === storySets.length - 1 ? 0 : prev + 1));
+    const interval = setInterval(() => {
+      const container = scrollRef.current;
+      if (!container) return;
+
+      const firstCard = container.firstElementChild as HTMLElement;
+      if (!firstCard) return;
+
+      const gap = 24; // lg:gap-6
+      const cardWidth = firstCard.offsetWidth + gap;
+
+      // When reaching half of the duplicated content, silently wrap back without jump
+      const halfWidth = container.scrollWidth / 2;
+      if (container.scrollLeft >= halfWidth - cardWidth) {
+        container.scrollLeft -= halfWidth;
+      }
+
+      container.scrollBy({ left: cardWidth, behavior: "smooth" });
+    }, 3600);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const firstCard = container.firstElementChild as HTMLElement;
+    if (!firstCard) return;
+
+    const gap = 24;
+    const cardWidth = firstCard.offsetWidth + gap;
+
+    const halfWidth = container.scrollWidth / 2;
+    if (container.scrollLeft >= halfWidth) {
+      container.scrollLeft -= halfWidth;
+    }
+
+    const dotIndex = Math.round(container.scrollLeft / cardWidth) % allStories.length;
+    setActiveDot(dotIndex);
   };
 
   return (
@@ -185,75 +228,59 @@ export const SuccessStories: React.FC = () => {
       className="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-100 select-none overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* 
-          ======================================================================
-          SECTION HEADER WITH CAPSULE NAV ARROWS (Exact match to screenshot)
-          ======================================================================
-        */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-zinc-900 tracking-tight">
-              Success Stories
-            </h2>
-            <p className="text-sm sm:text-base text-zinc-600 font-normal leading-relaxed max-w-xl">
-              See how we partner with global enterprises to solve challenges, accelerate transformation, and deliver measurable outcomes.
-            </p>
-          </div>
-
-          {/* Capsule Previous / Next Nav Buttons (Exact match to screenshot) */}
-          <div className="flex items-center gap-2.5 shrink-0 self-start md:self-auto">
-            <button
-              onClick={handlePrev}
-              aria-label="Previous stories"
-              className="w-12 sm:w-14 h-9 rounded-full bg-[#242321] hover:bg-[#ED1B36] active:scale-95 text-white flex items-center justify-center transition-all duration-200 shadow-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={handleNext}
-              aria-label="Next stories"
-              className="w-12 sm:w-14 h-9 rounded-full bg-[#242321] hover:bg-[#ED1B36] active:scale-95 text-white flex items-center justify-center transition-all duration-200 shadow-sm"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
+        {/* Section Header */}
+        <div className="mb-8 sm:mb-10 max-w-2xl space-y-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-zinc-900 tracking-tight">
+            Success Stories
+          </h2>
+          <p className="text-sm sm:text-base text-zinc-600 font-normal leading-relaxed">
+            See how we partner with global enterprises to solve challenges, accelerate transformation, and deliver measurable outcomes.
+          </p>
         </div>
 
         {/* 
           ======================================================================
-          SINGLE VIEW TYPE: 4 CARDS SIDE-BY-SIDE ON DESKTOP (Exact Screenshot)
+          AUTO-SCROLLING CARDS TRACK (Smooth animation one after another)
           ======================================================================
         */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-          {activeStories.map((story) => {
-            // Card 2: Split Racecar + Solid Burgundy Block
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+          className="flex gap-4 sm:gap-5 lg:gap-6 overflow-x-auto scrollbar-none scroll-smooth pb-4 select-none cursor-grab active:cursor-grabbing -mx-1 px-1"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {displayStories.map((story, idx) => {
+            // Card 2, 6, 8: Split Image + Burgundy Block
             if (story.type === "split-burgundy") {
               return (
                 <div
-                  key={story.id}
+                  key={`${story.id}-${idx}`}
                   onClick={() => setSelectedStory(story)}
-                  className="group relative flex flex-col h-[460px] sm:h-[480px] lg:h-[490px] rounded-none overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-zinc-200/90 bg-[#650025]"
+                  className="group relative flex flex-col shrink-0 w-[84vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] h-[460px] sm:h-[480px] lg:h-[490px] rounded-none overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-zinc-200/90 bg-[#650025]"
                 >
-                  {/* Top Portion (~58%): Ultra-HD Racing Hypercar on track */}
+                  {/* Top Portion (~58%) */}
                   <div className="relative h-[260px] sm:h-[280px] w-full overflow-hidden bg-zinc-950 shrink-0">
                     <Image
                       src={story.image}
                       alt={story.headline}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      unoptimized
                       priority
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    {/* Dark gradient at bottom edge of image to meet burgundy block */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 pointer-events-none" />
-
-                    {/* CASE STUDY Tag Badge */}
-                    <div className="absolute top-4 left-4 z-10 px-2.5 py-1 bg-black/65 backdrop-blur-md text-[10px] font-bold text-white uppercase tracking-wider">
-                      {story.badge}
-                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+                    {story.badge && (
+                      <div className="absolute top-4 left-4 z-10 px-2.5 py-1 bg-black/65 backdrop-blur-md text-[10px] font-bold text-white uppercase tracking-wider">
+                        {story.badge}
+                      </div>
+                    )}
                   </div>
 
-                  {/* Bottom Portion (~42%): Solid Deep Burgundy Block (Exact match to screenshot) */}
+                  {/* Bottom Portion (~42%): Solid Deep Burgundy Block */}
                   <div className="flex-1 bg-[#650025] group-hover:bg-[#52001e] transition-colors duration-300 p-5 sm:p-6 flex flex-col justify-end text-white">
                     <h3 className="text-lg sm:text-xl font-bold font-heading text-white leading-snug">
                       {story.burgundyTitle}
@@ -263,41 +290,31 @@ export const SuccessStories: React.FC = () => {
               );
             }
 
-            // Cards 1, 3, 4: Full Background Portrait Photos (Ultra-HD Indian Executives)
+            // Cards 1, 3, 4, 5, 7: Full Background Portrait Photos
             return (
               <div
-                key={story.id}
+                key={`${story.id}-${idx}`}
                 onClick={() => setSelectedStory(story)}
-                className="group relative h-[460px] sm:h-[480px] lg:h-[490px] rounded-none overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-zinc-200/90 bg-zinc-950"
+                className="group relative shrink-0 w-[84vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] h-[460px] sm:h-[480px] lg:h-[490px] rounded-none overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-zinc-200/90 bg-zinc-950"
               >
-                {/* Full Background Ultra-HD Photo */}
                 <Image
                   src={story.image}
                   alt={story.headline}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  unoptimized
                   priority
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-[0.92]"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-
-                {/* Dark Vignette Gradient for Perfect Typography Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15 group-hover:via-black/65 transition-colors duration-300" />
-
-                {/* Top Badge (e.g. VIDEO) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 via-35% to-transparent to-60% pointer-events-none" />
                 {story.badge && (
                   <div className="absolute top-4 left-4 z-10 px-2.5 py-1 bg-black/65 backdrop-blur-md text-[10px] font-bold text-white uppercase tracking-wider">
                     {story.badge}
                   </div>
                 )}
-
-                {/* Card Content Anchored at Bottom (Exact match to screenshot) */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-10 space-y-3.5">
-                  {/* Headline */}
                   <h3 className="text-[12.5px] sm:text-[13px] font-normal text-white leading-relaxed line-clamp-4">
                     {story.headline}
                   </h3>
-
-                  {/* Author / Client Info & Circular Action Icon */}
                   <div className="pt-2.5 flex items-end justify-between border-t border-white/20">
                     <div className="min-w-0 pr-2">
                       <h4 className="text-sm font-bold font-heading text-white truncate">
@@ -307,8 +324,6 @@ export const SuccessStories: React.FC = () => {
                         {story.authorRole}
                       </p>
                     </div>
-
-                    {/* Circular Action Button on Bottom-Right */}
                     <div className="w-8 h-8 rounded-full bg-white/20 group-hover:bg-[#ED1B36] text-white flex items-center justify-center shrink-0 transition-colors duration-200">
                       {story.type === "video" ? (
                         <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
@@ -321,6 +336,28 @@ export const SuccessStories: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Subtle Auto-Scroll Indicator Dots */}
+        <div className="flex items-center justify-center gap-1.5 pt-6">
+          {allStories.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                if (scrollRef.current) {
+                  const firstCard = scrollRef.current.firstElementChild as HTMLElement;
+                  if (firstCard) {
+                    const cardWidth = firstCard.offsetWidth + 24;
+                    scrollRef.current.scrollTo({ left: i * cardWidth, behavior: "smooth" });
+                  }
+                }
+              }}
+              aria-label={`Go to story ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                activeDot === i ? "w-8 bg-[#ED1B36]" : "w-2 bg-zinc-200 hover:bg-zinc-400"
+              }`}
+            />
+          ))}
         </div>
       </div>
 
@@ -344,6 +381,7 @@ export const SuccessStories: React.FC = () => {
                 src={selectedStory.image}
                 alt={selectedStory.headline}
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />

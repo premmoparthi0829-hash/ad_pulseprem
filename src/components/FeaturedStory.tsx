@@ -18,7 +18,7 @@ const speakers: [SpeakerInfo, SpeakerInfo] = [
   {
     name: "AMOL PHADKE",
     roleLine1: "Chief Transformation Officer,",
-    roleLine2: "Tech Mahindra & AdPulse Digital",
+    roleLine2: "AdPulse Digital",
   },
 ];
 

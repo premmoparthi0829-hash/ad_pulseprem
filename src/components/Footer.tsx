@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-[#070624] text-white overflow-hidden select-none">
       {/* 
         ======================================================================
-        EXACT WIREFRAME BACKGROUND MATCHING TECH MAHINDRA FOOTER SCREENSHOT
+        EXACT WIREFRAME BACKGROUND MATCHING ADPULSE DIGITAL FOOTER
         Slanted geometric facets, angled diagonal lines, and vertical dividers
         ======================================================================
       */}
@@ -178,12 +178,12 @@ export const Footer: React.FC = () => {
           {/* COLUMN 1: BRAND LOGO + 10 YEARS EMBLEM (Matches Left Section) */}
           {/* ============================================================== */}
           <div className="md:col-span-4 flex items-center gap-5 sm:gap-6 pt-2">
-            {/* Tech Mahindra Style Red Geometric Parallelogram + Typography */}
+            {/* AdPulse Digital Red Geometric Parallelogram + Typography */}
             <div
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-3.5 cursor-pointer group select-none shrink-0"
             >
-              {/* Solid Red Slanted Parallelogram (Tech Mahindra signature visual geometry) */}
+              {/* Solid Red Slanted Parallelogram */}
               <div
                 className="w-10 h-7 bg-[#ED1B36] group-hover:bg-[#c9122a] transition-colors shadow-md"
                 style={{
@@ -193,7 +193,7 @@ export const Footer: React.FC = () => {
 
               <div className="flex flex-col">
                 <span className="text-xl sm:text-2xl font-black tracking-tight font-heading text-white leading-none">
-                  ADPUTSE
+                  AD PULSE
                 </span>
                 <span className="text-[10px] font-bold tracking-[0.28em] uppercase text-zinc-300 font-heading -mt-0.5">
                   digital

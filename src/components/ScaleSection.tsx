@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ScaleSectionProps {
   onKnowMore?: () => void;
@@ -148,12 +149,12 @@ export const ScaleSection: React.FC<ScaleSectionProps> = ({
 
             {/* Sharp Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
-              <button
-                onClick={handleKnowMore}
-                className="px-6 sm:px-7 py-3 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs sm:text-[12.5px] font-black uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] cursor-pointer"
+              <Link
+                href="/scale-at-speed"
+                className="px-6 sm:px-7 py-3 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs sm:text-[12.5px] font-black uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] cursor-pointer inline-flex items-center justify-center"
               >
                 KNOW MORE
-              </button>
+              </Link>
 
               <button
                 onClick={handleBrandStory}

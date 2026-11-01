@@ -42,7 +42,7 @@ const indianCampuses: CityCampus[] = [
     description:
       "Digital i360 is a full-service digital agency specializing in innovative solutions for web and app development, digital marketing, branding, and more. We help businesses grow by delivering cutting-edge technology, creative strategies, and measurable results tailored to their unique needs.",
     address: "Hitech City Main Rd, Madhapur, Hyderabad, Telangana 500081",
-    landmark: "Near Butta Convention, Mahindra VVC Motors & Tan Coffee",
+    landmark: "Near Butta Convention, Cyber Towers & Tan Coffee",
     phone: "+918599002222",
     phoneFormatted: "(+91) 8599002222",
     email: "info@digitali360.com",

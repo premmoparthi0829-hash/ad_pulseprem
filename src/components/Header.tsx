@@ -89,7 +89,7 @@ export const Header: React.FC<HeaderProps> = ({
     <>
       {/* 
         ======================================================================
-        01. TOP FIXED HEADER BAR (Exact match to Tech Mahindra style)
+        01. TOP FIXED HEADER BAR (AdPulse Digital Enterprise Navigation)
         ======================================================================
       */}
       <header
@@ -100,8 +100,8 @@ export const Header: React.FC<HeaderProps> = ({
             : "border-b border-zinc-100 py-0"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[76px] sm:h-[82px]">
-          {/* Logo on Left with 10+ Years / 40 Years Emblem */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-[90px]">
+          {/* Logo on Left with Red Parallelogram & 10 Years Emblem */}
           <div
             onClick={() => {
               closeDropdowns();
@@ -111,13 +111,13 @@ export const Header: React.FC<HeaderProps> = ({
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }
             }}
-            className="cursor-pointer shrink-0 py-2"
+            className="cursor-pointer shrink-0 py-1"
           >
             <Logo theme="light" showBadge={true} />
           </div>
 
           {/* Desktop Center Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8 h-full text-[13px] font-bold tracking-wider font-heading uppercase text-zinc-800">
+          <nav className="hidden lg:flex items-center gap-7 xl:gap-9 h-full text-[13px] xl:text-[13.5px] font-bold tracking-[0.07em] font-heading uppercase text-zinc-800">
             {/* 01. ABOUT US */}
             <div
               className="h-full flex items-center relative"
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <span>ABOUT US</span>
                 {(activeDropdown === "about" || activePage === "about") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#242321]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
                 )}
               </button>
             </div>
@@ -153,7 +153,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <span>CAPABILITIES</span>
                 {(activeDropdown === "capabilities" || activePage === "capabilities") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#242321]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
                 )}
               </button>
             </div>
@@ -175,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <span>INDUSTRIES</span>
                 {(activeDropdown === "industries" || activePage === "industries") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#242321]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
                 )}
               </button>
             </div>
@@ -195,7 +195,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <span>INSIGHTS</span>
                 {(activeDropdown === "insights" || activePage === "insights") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#242321]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
                 )}
               </button>
             </div>
@@ -215,7 +215,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <span>CAREERS</span>
                 {(activeDropdown === "careers" || activePage === "careers") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#242321]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
                 )}
               </button>
             </div>
@@ -232,35 +232,31 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <span>CONTACT US</span>
                 {activePage === "contact" && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#242321]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
                 )}
               </button>
             </div>
           </nav>
 
           {/* Right Action Icons: Search & Language */}
-          <div className="flex items-center gap-5 shrink-0">
+          <div className="flex items-center gap-4 shrink-0">
             {/* Search Trigger */}
             <button
               onClick={onOpenSearch}
               aria-label="Search"
-              className="p-2 text-zinc-700 hover:text-[#ED1B36] transition-colors"
+              className="p-2 text-zinc-700 hover:text-[#ED1B36] transition-colors cursor-pointer"
             >
               <Search className="w-5 h-5 stroke-[2.2]" />
             </button>
-
-            {/* Subtle Divider */}
-            <div className="hidden sm:block w-[1px] h-4 bg-zinc-200" />
 
             {/* Language Selector */}
             <div className="relative">
               <button
                 onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-sm border border-zinc-200 hover:border-zinc-300 text-xs font-bold text-zinc-700 hover:text-zinc-900 transition-colors"
+                className="flex items-center gap-2 px-2.5 py-1.5 rounded-sm border border-zinc-200 hover:border-zinc-300 text-xs text-zinc-700 hover:text-zinc-900 transition-colors cursor-pointer"
               >
-                <Globe className="w-3.5 h-3.5 text-zinc-500" />
-                <span className="uppercase text-[11px]">{selectedLanguage}</span>
-                <span className="w-2 h-1.5 border-l-3 border-r-3 border-t-3 border-transparent border-t-red-600 inline-block ml-0.5" />
+                <Globe className="w-4 h-4 text-zinc-600" />
+                <span className="w-2 h-1.5 border-l-[3.5px] border-r-[3.5px] border-t-[4.5px] border-transparent border-t-[#ED1B36] inline-block ml-0.5" />
               </button>
 
               {languageMenuOpen && (
@@ -455,7 +451,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <div className="w-full lg:w-[360px] shrink-0 border-l border-zinc-100 flex flex-col">
                     {/* Promo Card 1: Scale at Speed */}
                     <div
-                      onClick={() => handleNavClick("scale-at-speed")}
+                      onClick={() => handleNavClick("scale-at-speed", "/scale-at-speed")}
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px]"
                     >
                       <Image
@@ -1075,7 +1071,7 @@ export const Header: React.FC<HeaderProps> = ({
           ======================================================================
         */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-[76px] sm:top-[82px] bottom-0 bg-white z-50 overflow-y-auto p-6 space-y-6">
+          <div className="lg:hidden fixed inset-x-0 top-[90px] bottom-0 bg-white z-50 overflow-y-auto p-6 space-y-6">
             <div className="space-y-4">
               <div>
                 <button
@@ -1201,7 +1197,7 @@ export const Header: React.FC<HeaderProps> = ({
       */}
       {activeDropdown !== null && (
         <div
-          className="fixed inset-0 top-[76px] sm:top-[82px] bg-black/25 backdrop-blur-[2px] z-30 transition-opacity duration-300 pointer-events-auto"
+          className="fixed inset-0 top-[90px] bg-black/25 backdrop-blur-[2px] z-30 transition-opacity duration-300 pointer-events-auto"
           onClick={closeDropdowns}
         />
       )}

@@ -100,7 +100,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
   return (
     <section
       id="hero-carousel"
-      className="relative w-full h-[580px] sm:h-[640px] lg:h-[700px] xl:h-[740px] overflow-hidden bg-black text-white select-none pt-[76px] sm:pt-[82px]"
+      className="relative w-full h-[600px] sm:h-[660px] lg:h-[720px] xl:h-[760px] overflow-hidden bg-black text-white select-none pt-[90px]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

@@ -51,7 +51,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      <main className="flex-1 w-full pt-[72px] sm:pt-[80px]">
+      <main className="flex-1 w-full pt-[90px]">
         {/* 
           ======================================================================
           02. BREADCRUMBS BAR
