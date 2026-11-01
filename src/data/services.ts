@@ -1,0 +1,208 @@
+import { ServiceItem } from "@/types";
+
+export const servicesData: ServiceItem[] = [
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing",
+    shortDesc: "Omnichannel growth strategies engineered for market dominance.",
+    fullDesc:
+      "We build integrated, high-velocity digital marketing ecosystems that transform casual browsers into long-term enterprise advocates, leveraging data science, algorithmic targeting, and precision messaging.",
+    category: "marketing",
+    metrics: { label: "Average Growth Rate", value: "+185%" },
+    keyCapabilities: [
+      "Omnichannel Strategy & Execution",
+      "Customer Acquisition Funnels",
+      "Full-Funnel Attribution Modeling",
+      "Brand Positioning & Activation",
+    ],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=85",
+    slug: "digital-marketing",
+  },
+  {
+    id: "seo",
+    title: "Search Engine Optimization",
+    shortDesc: "Dominating organic search through technical excellence and semantic authority.",
+    fullDesc:
+      "Comprehensive search engine architecture, enterprise technical SEO audits, AI search engine indexing (GEO), and programmatic content structures that cement your brand at the summit of organic rankings.",
+    category: "marketing",
+    metrics: { label: "Organic Visibility Lift", value: "3.4x" },
+    keyCapabilities: [
+      "Enterprise Technical Architecture",
+      "Semantic Topic Clustering",
+      "Core Web Vitals Optimization",
+      "AI Search & Generative Engine Optimization",
+    ],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=85",
+    slug: "seo",
+  },
+  {
+    id: "social-media",
+    title: "Social Media Marketing",
+    shortDesc: "Compelling brand storytelling and community engagement across global channels.",
+    fullDesc:
+      "We orchestrate hyper-targeted social campaigns, executive personal branding, crisis management protocols, and immersive community experiences that turn social channels into predictable revenue drivers.",
+    category: "marketing",
+    metrics: { label: "Engagement Rate Increase", value: "+210%" },
+    keyCapabilities: [
+      "Executive & Corporate Thought Leadership",
+      "Cross-Platform Campaign Production",
+      "Community Sentiment & Intelligence",
+      "Influencer & Creator Ecosystems",
+    ],
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop&q=85",
+    slug: "social-media",
+  },
+  {
+    id: "performance-marketing",
+    title: "Performance Marketing",
+    shortDesc: "High-yield paid media execution optimized for maximum enterprise ROAS.",
+    fullDesc:
+      "Algorithmic bidding frameworks, dynamic creative optimization, and multi-touch attribution that maximize capital efficiency across Google, LinkedIn, Meta, and programmatic DSP networks.",
+    category: "marketing",
+    metrics: { label: "Average Enterprise ROAS", value: "4.8x" },
+    keyCapabilities: [
+      "Algorithmic Paid Search (PMax & Search)",
+      "B2B Account-Based Marketing (ABM)",
+      "Programmatic Real-Time Bidding",
+      "Predictive LTV Modeling",
+    ],
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&auto=format&fit=crop&q=85",
+    slug: "performance-marketing",
+  },
+  {
+    id: "branding-creative",
+    title: "Branding & Creative Design",
+    shortDesc: "Distinctive corporate identity systems that command authority.",
+    fullDesc:
+      "From comprehensive brand guidelines and typographic systems to 3D visual languages and brand films, we construct magnetic visual identities that reflect global enterprise prestige.",
+    category: "strategy",
+    metrics: { label: "Brand Recall Uplift", value: "+92%" },
+    keyCapabilities: [
+      "Corporate Identity Systems",
+      "Design Systems & Brand Toolkits",
+      "Motion Design & 3D Visualization",
+      "Editorial Copywriting & Tone of Voice",
+    ],
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&auto=format&fit=crop&q=85",
+    slug: "branding-creative",
+  },
+  {
+    id: "web-development",
+    title: "Website Development",
+    shortDesc: "High-performance, resilient web platforms built on modern cloud architectures.",
+    fullDesc:
+      "Enterprise Next.js, headless CMS implementations, micro-frontend architectures, and ultra-fast edge delivery engineered to convert global traffic with sub-second page loads.",
+    category: "technology",
+    metrics: { label: "Lighthouse Score", value: "99/100" },
+    keyCapabilities: [
+      "Next.js & React App Architecture",
+      "Headless CMS Integration (Sanity, Contentful)",
+      "Edge-Rendered Global Performance",
+      "Enterprise Accessibility (WCAG 2.2 AA)",
+    ],
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop&q=85",
+    slug: "web-development",
+  },
+  {
+    id: "mobile-apps",
+    title: "Mobile App Development",
+    shortDesc: "Intuitive, native iOS & Android applications engineered for millions of users.",
+    fullDesc:
+      "Architecting cross-platform and native mobile solutions with Flutter and Swift/Kotlin, featuring offline-first data sync, biometric authentication, and frictionless payment checkouts.",
+    category: "technology",
+    metrics: { label: "App Store Rating Avg", value: "4.9/5" },
+    keyCapabilities: [
+      "Native iOS & Android Engineering",
+      "Cross-Platform Flutter Solutions",
+      "Real-Time Push & Telemetry Pipelines",
+      "Secure Biometrics & In-App Payments",
+    ],
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&auto=format&fit=crop&q=85",
+    slug: "mobile-apps",
+  },
+  {
+    id: "software-development",
+    title: "Software Development",
+    shortDesc: "Custom enterprise software, API integrations, and cloud architectures.",
+    fullDesc:
+      "Bespoke SaaS platforms, microservices architectures, distributed databases, and secure enterprise integrations designed to streamline core operations and fuel scalable growth.",
+    category: "technology",
+    metrics: { label: "System Uptime SLA", value: "99.99%" },
+    keyCapabilities: [
+      "Microservices & Event-Driven Systems",
+      "High-Throughput REST & GraphQL APIs",
+      "Cloud Infrastructure (AWS, Azure, GCP)",
+      "SOC2 & Enterprise Data Security",
+    ],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=85",
+    slug: "software-development",
+  },
+  {
+    id: "ui-ux-design",
+    title: "UI/UX Design",
+    shortDesc: "Human-centered digital product design that eliminates cognitive friction.",
+    fullDesc:
+      "Rigorous user research, heuristic evaluations, interactive rapid prototyping, and sophisticated Figma design systems that turn complex workflows into delightful customer journeys.",
+    category: "strategy",
+    metrics: { label: "Conversion Rate Improvement", value: "+140%" },
+    keyCapabilities: [
+      "User Journey Mapping & Wireframing",
+      "Enterprise Product Prototyping",
+      "Design Systems & Token Architecture",
+      "Usability Testing & Eye-Tracking Studies",
+    ],
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&auto=format&fit=crop&q=85",
+    slug: "ui-ux-design",
+  },
+  {
+    id: "ecommerce-solutions",
+    title: "E-commerce Solutions",
+    shortDesc: "High-volume commerce platforms built for conversion and global fulfillment.",
+    fullDesc:
+      "Custom Shopify Plus, commercetools, and headless commerce architectures with omnichannel inventory synchronization, personalized cross-sells, and localized currencies.",
+    category: "technology",
+    metrics: { label: "Cart Abandonment Drop", value: "-38%" },
+    keyCapabilities: [
+      "Shopify Plus & Headless Commerce",
+      "Global Multi-Currency & Localization",
+      "ERP & Logistics Synchronizations",
+      "One-Click Checkout Optimization",
+    ],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=85",
+    slug: "ecommerce-solutions",
+  },
+  {
+    id: "ai-automation",
+    title: "AI & Marketing Automation",
+    shortDesc: "Intelligent autonomous workflows and predictive customer intelligence.",
+    fullDesc:
+      "Integrating generative AI models, automated lead qualification agents, predictive retention triggers, and custom LLM copilots that scale enterprise efficiency ten-fold.",
+    category: "technology",
+    metrics: { label: "Operational Hours Saved", value: "12,000+" },
+    keyCapabilities: [
+      "Custom Enterprise LLM Fine-Tuning",
+      "Automated Nurture Sequences (HubSpot, Marketo)",
+      "Predictive Churn & Propensity Scoring",
+      "Autonomous 24/7 AI Sales Assistants",
+    ],
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&auto=format&fit=crop&q=85",
+    slug: "ai-automation",
+  },
+  {
+    id: "tech-consulting",
+    title: "Technology Consulting",
+    shortDesc: "Strategic digital transformation roadmaps for modern enterprise leaders.",
+    fullDesc:
+      "Guiding C-suite leaders through complex IT modernizations, legacy system migrations, tech stack rationalizations, and data governance frameworks to secure enduring market advantage.",
+    category: "strategy",
+    metrics: { label: "Tech Stack Cost Reduction", value: "-32%" },
+    keyCapabilities: [
+      "Digital Transformation Roadmaps",
+      "Legacy Cloud Migration Strategies",
+      "Vendor & Architecture Evaluations",
+      "Cybersecurity & Regulatory Compliance",
+    ],
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop&q=85",
+    slug: "tech-consulting",
+  },
+];

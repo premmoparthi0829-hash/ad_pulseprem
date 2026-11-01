@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-heading: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    
+    --color-adpulse-red: #ED1B36;
+    --color-deep-burgundy: #650025;
+    --color-midnight-navy: #09082F;
+    --color-warm-ivory: #F4F0E7;
+    --color-charcoal: #242321;
+    --color-light-grey: #F5F5F5;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #242321;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom pattern utilities */
+.bg-warm-ivory {
+  background-color: #F4F0E7;
+}
+
+.bg-deep-burgundy {
+  background-color: #650025;
+}
+
+.bg-midnight-navy {
+  background-color: #09082F;
+}
+
+.text-adpulse-red {
+  color: #ED1B36;
+}
+
+.bg-adpulse-red {
+  background-color: #ED1B36;
+}
+
+.border-adpulse-red {
+  border-color: #ED1B36;
+}
+
+/* Tech Mahindra style subtle vertical pinstripes */
+.bg-pinstripe-pattern {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(36, 35, 33, 0.03) 0px,
+    rgba(36, 35, 33, 0.03) 1px,
+    transparent 1px,
+    transparent 64px
+  );
+}
+
+.bg-pinstripe-dark {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.04) 0px,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px,
+    transparent 72px
+  );
+}
+
+/* Isometric diamond wireframe overlay */
+.bg-isometric-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(30deg, rgba(237, 27, 54, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(237, 27, 54, 0.05) 87.5%, rgba(237, 27, 54, 0.05)),
+    linear-gradient(150deg, rgba(237, 27, 54, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(237, 27, 54, 0.05) 87.5%, rgba(237, 27, 54, 0.05)),
+    linear-gradient(60deg, rgba(101, 0, 37, 0.04) 25%, transparent 25.5%, transparent 75%, rgba(101, 0, 37, 0.04) 75%, rgba(101, 0, 37, 0.04));
+}
+
+/* Red diagonal corner stripes for industry cards (matching reference screenshot 5) */
+.diagonal-stripes-red {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(237, 27, 54, 0.12),
+    rgba(237, 27, 54, 0.12) 2px,
+    transparent 2px,
+    transparent 7px
+  );
+}
+
+/* Glassmorphism subtle headers */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Hide scrollbar for clean carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
