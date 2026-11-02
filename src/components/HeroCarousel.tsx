@@ -35,7 +35,7 @@ const slides: SlideData[] = [
     description:
       "Cement your brand at the summit of Google and generative AI engines. We architect semantic content clusters, technical SEO pipelines, and authority networks that multiply organic pipeline.",
     ctaText: "BOOST ORGANIC TRAFFIC",
-    bgImage: "/images/hero-slide-sustainability.jpg",
+    bgImage: "/images/hero-slide-seo.jpg",
   },
   {
     id: 3,
