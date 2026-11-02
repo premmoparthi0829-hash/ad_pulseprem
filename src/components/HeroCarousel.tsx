@@ -21,38 +21,38 @@ interface SlideData {
 const slides: SlideData[] = [
   {
     id: 1,
-    headlineLine1: "Ranked Among Top Indian IT & Digital",
-    headlineLine2: "Services Brands by Global Analysts",
+    headlineLine1: "Scale Your Brand at Speed",
+    headlineLine2: "with Data-Driven Digital Marketing",
     description:
-      "AdPulse Digital is recognized globally for Brand Strength Index ranking, enterprise AI engineering, and compounding digital transformation delivery in 2026.",
-    ctaText: "KNOW MORE",
+      "AdPulse Digital engineers full-funnel digital marketing ecosystems, precision paid advertising, and high-converting creative campaigns that turn customer interest into exponential revenue.",
+    ctaText: "EXPLORE SERVICES",
     bgImage: "/images/hero-slide-architecture.jpg",
   },
   {
     id: 2,
-    headlineLine1: "Recognized Among the World's Most",
-    headlineLine2: "Sustainable Digital Enterprises 2026",
+    headlineLine1: "Dominate Search Rankings with AI-Powered",
+    headlineLine2: "Enterprise SEO & Growth Engineering",
     description:
-      "AdPulse Digital ranks among leading digital transformation partners globally, reflecting our commitment to embedding sustainability across operations, solutions, and cloud strategy.",
-    ctaText: "KNOW MORE",
+      "Cement your brand at the summit of Google and generative AI engines. We architect semantic content clusters, technical SEO pipelines, and authority networks that multiply organic pipeline.",
+    ctaText: "BOOST ORGANIC TRAFFIC",
     bgImage: "/images/hero-slide-sustainability.jpg",
   },
   {
     id: 3,
-    headlineLine1: "Scale at Speed with Cognitive AI",
-    headlineLine2: "& Autonomous Enterprise Systems",
+    headlineLine1: "Maximize ROAS Across Meta, Google",
+    headlineLine2: "& Programmatic Ad Channels",
     description:
-      "Modernizing mission-critical workflows with zero-trust cyber resilience, bespoke LLM fine-tuning, and sub-50ms global edge cloud distribution.",
-    ctaText: "KNOW MORE",
+      "Stop wasting ad spend. Our algorithmic bidding strategies, predictive LTV models, and dynamic creative testing deliver an average 4.8x enterprise return on ad spend.",
+    ctaText: "ACCELERATE ROAS",
     bgImage: "/images/hero-slide-speed.jpg",
   },
   {
     id: 4,
-    headlineLine1: "Powering Digital. Accelerating Growth.",
-    headlineLine2: "Across 14 Global Industries",
+    headlineLine1: "Magnetic Creative & Viral Social",
+    headlineLine2: "That Captivates, Engages & Converts",
     description:
-      "Deep industry verticalization across media, financial services, telecommunications, retail, and manufacturing with measurable bottom-line ROI.",
-    ctaText: "KNOW MORE",
+      "From high-velocity social media marketing and creator partnerships to cinematic ad production, we build viral brand movements that command attention across 14 global industries.",
+    ctaText: "DISCOVER CAMPAIGNS",
     bgImage: "/images/hero-slide-burgundy.jpg",
   },
 ];
@@ -123,7 +123,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
             fill
             sizes="100vw"
             unoptimized={true}
-            priority={idx === 0}
+            priority={true}
             className="object-cover object-center transform scale-100 transition-transform duration-[7000ms] ease-out filter contrast-100 brightness-100"
           />
 
@@ -214,11 +214,11 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
         ======================================================================
       */}
       <div className="absolute bottom-6 sm:bottom-8 right-6 sm:right-8 lg:right-12 z-30 flex items-center gap-2 pointer-events-auto">
-        {/* Previous Button (Active Deep Burgundy Circle) */}
+        {/* Previous Button (Active Primary Blue Circle with Orange Hover) */}
         <button
           onClick={prevSlide}
           aria-label="Previous slide"
-          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#650025] hover:bg-[#850031] text-white flex items-center justify-center transition-all duration-200 shadow-md cursor-pointer hover:scale-105"
+          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#01286D] hover:bg-[#FD6E12] text-white flex items-center justify-center transition-all duration-200 shadow-md cursor-pointer hover:scale-105"
         >
           <ChevronLeft className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
         </button>
@@ -232,7 +232,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
         <button
           onClick={nextSlide}
           aria-label="Next slide"
-          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/40 hover:bg-[#650025] border border-white/20 hover:border-transparent text-white flex items-center justify-center transition-all duration-200 shadow-md cursor-pointer hover:scale-105"
+          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/40 hover:bg-[#FD6E12] border border-white/20 hover:border-transparent text-white flex items-center justify-center transition-all duration-200 shadow-md cursor-pointer hover:scale-105"
         >
           <ChevronRight className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
         </button>

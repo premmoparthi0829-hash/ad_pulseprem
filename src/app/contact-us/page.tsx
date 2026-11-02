@@ -109,7 +109,7 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#242321] selection:bg-[#ED1B36] selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-white text-[#242321] selection:bg-[#FD6E12] selection:text-white relative">
       {/* 
         ======================================================================
         01. GLOBAL HEADER BAR (Active on CONTACT US tab)
@@ -155,10 +155,10 @@ export default function ContactUsPage() {
                       onClick={() => toggleAccordion(item.id)}
                       className="w-full py-6 sm:py-7 flex items-center justify-between text-left group cursor-pointer"
                     >
-                      <span className="text-xl sm:text-2xl font-black font-heading text-[#242321] group-hover:text-[#ED1B36] transition-colors tracking-tight">
+                      <span className="text-xl sm:text-2xl font-black font-heading text-[#242321] group-hover:text-[#FD6E12] transition-colors tracking-tight">
                         {item.title}
                       </span>
-                      <div className="w-8 h-8 flex items-center justify-center text-zinc-600 group-hover:text-[#ED1B36] transition-colors">
+                      <div className="w-8 h-8 flex items-center justify-center text-zinc-600 group-hover:text-[#FD6E12] transition-colors">
                         {isOpen ? (
                           <Minus className="w-6 h-6 stroke-[2]" />
                         ) : (
@@ -188,7 +188,7 @@ export default function ContactUsPage() {
                                 <div className="pt-2">
                                   <button
                                     onClick={() => setStatus("idle")}
-                                    className="text-xs font-bold text-[#ED1B36] hover:underline uppercase"
+                                    className="text-xs font-bold text-[#FD6E12] hover:underline uppercase"
                                   >
                                     Submit Another Request →
                                   </button>
@@ -215,7 +215,7 @@ export default function ContactUsPage() {
                                       onChange={handleInputChange}
                                       required
                                       placeholder="e.g. Sarah Jenkins"
-                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#ED1B36] focus:bg-white outline-none transition-colors"
+                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#FD6E12] focus:bg-white outline-none transition-colors"
                                     />
                                   </div>
 
@@ -230,7 +230,7 @@ export default function ContactUsPage() {
                                       onChange={handleInputChange}
                                       required
                                       placeholder="s.jenkins@enterprise.com"
-                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#ED1B36] focus:bg-white outline-none transition-colors"
+                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#FD6E12] focus:bg-white outline-none transition-colors"
                                     />
                                   </div>
                                 </div>
@@ -247,7 +247,7 @@ export default function ContactUsPage() {
                                       onChange={handleInputChange}
                                       required
                                       placeholder="e.g. Paramount Global"
-                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#ED1B36] focus:bg-white outline-none transition-colors"
+                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#FD6E12] focus:bg-white outline-none transition-colors"
                                     />
                                   </div>
 
@@ -261,7 +261,7 @@ export default function ContactUsPage() {
                                       value={formData.phone}
                                       onChange={handleInputChange}
                                       placeholder="+1 (555) 000-0000"
-                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#ED1B36] focus:bg-white outline-none transition-colors"
+                                      className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#FD6E12] focus:bg-white outline-none transition-colors"
                                     />
                                   </div>
                                 </div>
@@ -275,7 +275,7 @@ export default function ContactUsPage() {
                                     value={formData.serviceRequired}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#ED1B36] focus:bg-white outline-none transition-colors"
+                                    className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#FD6E12] focus:bg-white outline-none transition-colors"
                                   >
                                     <option value="Digital Transformation & Cloud Modernization">
                                       Digital Transformation & Cloud Modernization
@@ -309,7 +309,7 @@ export default function ContactUsPage() {
                                     required
                                     rows={4}
                                     placeholder="Please outline your technical scope, key goals, and anticipated project timeline..."
-                                    className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#ED1B36] focus:bg-white outline-none transition-colors resize-y"
+                                    className="w-full bg-[#FAF8F5] border border-zinc-300 p-3 text-xs sm:text-sm text-zinc-900 focus:border-[#FD6E12] focus:bg-white outline-none transition-colors resize-y"
                                   />
                                 </div>
 
@@ -317,7 +317,7 @@ export default function ContactUsPage() {
                                   <button
                                     type="submit"
                                     disabled={loading}
-                                    className="px-8 py-3.5 bg-[#ED1B36] hover:bg-[#C8102E] text-white font-extrabold text-xs uppercase tracking-widest transition-all duration-200 shadow-md flex items-center gap-2 disabled:opacity-50"
+                                    className="px-8 py-3.5 bg-[#FD6E12] hover:bg-[#e05e0c] text-white font-extrabold text-xs uppercase tracking-widest transition-all duration-200 shadow-md flex items-center gap-2 disabled:opacity-50"
                                   >
                                     {loading ? (
                                       <>
@@ -341,7 +341,7 @@ export default function ContactUsPage() {
                         {item.id === "join-adpulse" && (
                           <div className="bg-white p-8 border border-zinc-200 shadow-sm max-w-4xl space-y-4">
                             <div className="flex items-center gap-2 text-zinc-900 font-bold text-lg">
-                              <Users className="w-5 h-5 text-[#ED1B36]" />
+                              <Users className="w-5 h-5 text-[#FD6E12]" />
                               <span>Careers & Talent Opportunities</span>
                             </div>
                             <p className="text-sm text-zinc-600 leading-relaxed">
@@ -350,7 +350,7 @@ export default function ContactUsPage() {
                             <div className="pt-2 flex flex-wrap gap-4">
                               <a
                                 href="mailto:careers@adpulse-digital.com?subject=Career%20Inquiry"
-                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#ED1B36] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
+                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#FD6E12] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
                               >
                                 Email Talent Acquisition
                               </a>
@@ -368,7 +368,7 @@ export default function ContactUsPage() {
                         {item.id === "vendor-reg" && (
                           <div className="bg-white p-8 border border-zinc-200 shadow-sm max-w-4xl space-y-4">
                             <div className="flex items-center gap-2 text-zinc-900 font-bold text-lg">
-                              <ShieldCheck className="w-5 h-5 text-[#ED1B36]" />
+                              <ShieldCheck className="w-5 h-5 text-[#FD6E12]" />
                               <span>Global Supplier & Vendor Onboarding</span>
                             </div>
                             <p className="text-sm text-zinc-600 leading-relaxed">
@@ -377,7 +377,7 @@ export default function ContactUsPage() {
                             <div className="pt-2">
                               <a
                                 href="mailto:procurement@adpulse-digital.com?subject=Vendor%20Registration"
-                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#ED1B36] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
+                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#FD6E12] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
                               >
                                 Register as a Certified Vendor
                               </a>
@@ -389,7 +389,7 @@ export default function ContactUsPage() {
                         {item.id === "ex-employee" && (
                           <div className="bg-white p-8 border border-zinc-200 shadow-sm max-w-4xl space-y-4">
                             <div className="flex items-center gap-2 text-zinc-900 font-bold text-lg">
-                              <Briefcase className="w-5 h-5 text-[#ED1B36]" />
+                              <Briefcase className="w-5 h-5 text-[#FD6E12]" />
                               <span>Alumni & Service Verification Desk</span>
                             </div>
                             <p className="text-sm text-zinc-600 leading-relaxed">
@@ -398,7 +398,7 @@ export default function ContactUsPage() {
                             <div className="pt-2">
                               <a
                                 href="mailto:alumni-desk@adpulse-digital.com?subject=Alumni%20Verification%20Request"
-                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#ED1B36] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
+                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#FD6E12] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
                               >
                                 Contact Alumni Service Desk
                               </a>
@@ -410,7 +410,7 @@ export default function ContactUsPage() {
                         {item.id === "investor-info" && (
                           <div className="bg-white p-8 border border-zinc-200 shadow-sm max-w-4xl space-y-4">
                             <div className="flex items-center gap-2 text-zinc-900 font-bold text-lg">
-                              <TrendingUp className="w-5 h-5 text-[#ED1B36]" />
+                              <TrendingUp className="w-5 h-5 text-[#FD6E12]" />
                               <span>Shareholder Relations & Corporate Filings</span>
                             </div>
                             <p className="text-sm text-zinc-600 leading-relaxed">
@@ -419,7 +419,7 @@ export default function ContactUsPage() {
                             <div className="pt-2">
                               <a
                                 href="mailto:investor-relations@adpulse-digital.com?subject=Investor%20Information%20Request"
-                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#ED1B36] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
+                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#FD6E12] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
                               >
                                 Email Investor Relations
                               </a>
@@ -439,7 +439,7 @@ export default function ContactUsPage() {
                             <div className="pt-2">
                               <a
                                 href="mailto:press@adpulse-digital.com?subject=General%20Corporate%20Inquiry"
-                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#ED1B36] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
+                                className="px-6 py-2.5 bg-[#242321] hover:bg-[#FD6E12] text-white text-xs font-bold uppercase tracking-wider transition-colors inline-block"
                               >
                                 Contact Corporate Communications
                               </a>
@@ -488,7 +488,7 @@ export default function ContactUsPage() {
                   setOpenAccordion("request-service");
                   window.scrollTo({ top: 300, behavior: "smooth" });
                 }}
-                className="text-[11px] font-bold text-[#ED1B36] hover:underline flex items-center gap-1 uppercase"
+                className="text-[11px] font-bold text-[#FD6E12] hover:underline flex items-center gap-1 uppercase"
               >
                 <span>Submit Inquiry</span>
                 <ArrowRight className="w-3 h-3" />
@@ -498,15 +498,15 @@ export default function ContactUsPage() {
             <div className="absolute -bottom-2 right-6 w-3 h-3 bg-white border-r border-b border-zinc-300 transform rotate-45" />
           </div>
 
-          {/* Red Bot Circle Avatar with Notification Badge 1 */}
+          {/* Bot Circle Avatar with Notification Badge 1 */}
           <div
             onClick={() => {
               setOpenAccordion("request-service");
               window.scrollTo({ top: 300, behavior: "smooth" });
             }}
-            className="w-12 h-12 rounded-full bg-[#ED1B36] text-white flex items-center justify-center shadow-xl cursor-pointer hover:scale-105 transition-transform relative shrink-0"
+            className="w-12 h-12 rounded-full bg-[#FD6E12] text-white flex items-center justify-center shadow-xl cursor-pointer hover:scale-105 transition-transform relative shrink-0"
           >
-            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-800 text-white text-[10px] font-black flex items-center justify-center border-2 border-white">
+            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#01286D] text-white text-[10px] font-black flex items-center justify-center border-2 border-white">
               1
             </span>
             <MessageSquare className="w-5 h-5" />

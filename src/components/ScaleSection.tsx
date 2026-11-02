@@ -128,40 +128,40 @@ export const ScaleSection: React.FC<ScaleSectionProps> = ({
             {/* Primary Trademark Headline */}
             <div>
               <div className="flex items-start">
-                <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-black font-heading tracking-tight text-[#ED1B36] leading-none">
+                <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-black font-heading tracking-tight text-[#FD6E12] leading-none">
                   Scale at Speed
                 </h2>
-                <sup className="text-sm sm:text-base font-bold text-[#ED1B36] ml-0.5 mt-1">
+                <sup className="text-sm sm:text-base font-bold text-[#FD6E12] ml-0.5 mt-1">
                   ™
                 </sup>
               </div>
-              <h3 className="text-3xl sm:text-4xl lg:text-[46px] font-black font-heading tracking-tight text-[#242321] leading-tight mt-1.5">
+              <h3 className="text-3xl sm:text-4xl lg:text-[46px] font-black font-heading tracking-tight text-[#01286D] leading-tight mt-1.5">
                 with AdPulse Digital
               </h3>
             </div>
 
             {/* Paragraph Description */}
             <p className="text-sm sm:text-base lg:text-[16px] text-zinc-700 leading-relaxed font-normal max-w-lg">
-              Our promise to help enterprises across industries transform at
-              speed and bring agility, resilience, and efficiency to their
-              businesses.
+              Our promise to help ambitious brands and enterprises scale customer
+              acquisition, maximize marketing ROAS, and dominate digital channels
+              with high-velocity creative performance.
             </p>
 
             {/* Sharp Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
               <Link
                 href="/scale-at-speed"
-                className="px-6 sm:px-7 py-3 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs sm:text-[12.5px] font-black uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] cursor-pointer inline-flex items-center justify-center"
+                className="px-6 sm:px-7 py-3 bg-[#FD6E12] hover:bg-[#E05A05] text-white text-xs sm:text-[12.5px] font-black uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] cursor-pointer inline-flex items-center justify-center"
               >
-                KNOW MORE
+                OUR MARKETING PLAYBOOK
               </Link>
 
-              <button
-                onClick={handleBrandStory}
-                className="px-6 sm:px-7 py-3 bg-transparent hover:bg-[#ED1B36]/5 text-[#ED1B36] border border-[#ED1B36] text-xs sm:text-[12.5px] font-black uppercase tracking-wider transition-all duration-200 cursor-pointer"
+              <Link
+                href="/about-us/our-brand"
+                className="px-6 sm:px-7 py-3 bg-transparent hover:bg-[#FD6E12]/10 text-[#FD6E12] border border-[#FD6E12] text-xs sm:text-[12.5px] font-black uppercase tracking-wider transition-all duration-200 cursor-pointer inline-flex items-center justify-center"
               >
-                OUR BRAND STORY
-              </button>
+                OUR GROWTH PHILOSOPHY
+              </Link>
             </div>
           </div>
 

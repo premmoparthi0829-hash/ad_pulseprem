@@ -19,10 +19,10 @@ export const WhatsNew: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#ED1B36] block mb-2">
+            <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#FD6E12] block mb-2">
               DISPATCHES & ANNOUNCEMENTS
             </span>
-            <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#242321] tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#01286D] tracking-tight">
               What&apos;s New
             </h2>
             <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed mt-3">
@@ -35,14 +35,14 @@ export const WhatsNew: React.FC = () => {
             <button
               onClick={() => scroll("left")}
               aria-label="Previous updates"
-              className="w-12 h-12 rounded-full bg-zinc-800 hover:bg-[#ED1B36] text-white flex items-center justify-center transition-all duration-300 shadow-md group"
+              className="w-12 h-12 rounded-full bg-zinc-800 hover:bg-[#FD6E12] text-white flex items-center justify-center transition-all duration-300 shadow-md group cursor-pointer"
             >
               <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
             </button>
             <button
               onClick={() => scroll("right")}
               aria-label="Next updates"
-              className="w-12 h-12 rounded-full bg-zinc-800 hover:bg-[#ED1B36] text-white flex items-center justify-center transition-all duration-300 shadow-md group"
+              className="w-12 h-12 rounded-full bg-zinc-800 hover:bg-[#FD6E12] text-white flex items-center justify-center transition-all duration-300 shadow-md group cursor-pointer"
             >
               <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
             </button>
@@ -61,7 +61,7 @@ export const WhatsNew: React.FC = () => {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-zinc-400">
-                  <span className="flex items-center gap-1.5 text-[#ED1B36]">
+                  <span className="flex items-center gap-1.5 text-[#FD6E12]">
                     <Bell className="w-3.5 h-3.5" />
                     {item.category}
                   </span>
@@ -71,7 +71,7 @@ export const WhatsNew: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold font-heading text-zinc-900 group-hover:text-[#ED1B36] transition-colors leading-snug">
+                <h3 className="text-lg font-bold font-heading text-[#01286D] group-hover:text-[#FD6E12] transition-colors leading-snug">
                   {item.title}
                 </h3>
 
@@ -81,9 +81,9 @@ export const WhatsNew: React.FC = () => {
               </div>
 
               <div className="pt-6 border-t border-zinc-100 mt-6 flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-900 group-hover:text-[#ED1B36] flex items-center gap-1.5 transition-colors">
+                <span className="text-xs font-bold text-zinc-900 group-hover:text-[#FD6E12] flex items-center gap-1.5 transition-colors cursor-pointer">
                   {item.linkText}
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-[#ED1B36]" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-[#FD6E12]" />
                 </span>
               </div>
             </div>

@@ -8,7 +8,6 @@ import { LatestThinking } from "@/components/LatestThinking";
 import { Capabilities } from "@/components/Capabilities";
 import { Industries } from "@/components/Industries";
 import { SuccessStories } from "@/components/SuccessStories";
-import { OurApproach } from "@/components/OurApproach";
 import { Careers } from "@/components/Careers";
 import { BigThinkers } from "@/components/BigThinkers";
 import { WhatsNew } from "@/components/WhatsNew";
@@ -38,11 +37,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#242321] selection:bg-[#ED1B36] selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-white text-[#242321] selection:bg-[#FD6E12] selection:text-white relative">
       {/* 00. Global Sticky Navigation */}
       <Header
         onOpenSearch={() => setIsSearchOpen(true)}
-        onOpenContact={() => handleOpenContactWithService("Enterprise Digital Transformation")}
+        onOpenContact={() => handleOpenContactWithService("Digital Marketing & Growth Strategy")}
       />
 
       <main className="flex-1 w-full overflow-hidden">
@@ -54,8 +53,8 @@ export default function Home() {
 
         {/* 02. Section 02: Scale at Speed */}
         <ScaleSection
-          onKnowMore={() => handleScrollToSection("capabilities")}
-          onBrandStory={() => handleScrollToSection("approach")}
+          onKnowMore={() => { window.location.href = "/scale-at-speed"; }}
+          onBrandStory={() => { window.location.href = "/about-us/our-brand"; }}
         />
 
         {/* 03. Section 03: Featured Digital Story / Podcast */}
@@ -75,24 +74,23 @@ export default function Home() {
         {/* 07. Section 07: Success Stories (Directly below Industries as in screenshot) */}
         <SuccessStories />
 
-        {/* 08. Section 08: Our Approach */}
-        <OurApproach />
-
-        {/* 09. Section 09: The Big Thinkers */}
+        {/* 08. Section 08: The Big Thinkers */}
         <BigThinkers />
 
-        {/* 10. Section 10: What's New */}
+        {/* 09. Section 09: What's New */}
         <WhatsNew />
 
-        {/* 11. Section 11: Contact CTA */}
+        {/* 10. Section 10: Contact CTA (kept, without the trajectory pill badge) */}
         <ContactCTA
           onStartProject={() => handleOpenContactWithService("Enterprise New Project")}
           onContactTeam={() => handleOpenContactWithService("General Inquiry")}
         />
 
-        {/* 12. Section 12: Careers / Limitless Together (Directly above Footer) */}
+        {/* 11. Section 11: Careers / Limitless Together (Navigates to /careers) */}
         <Careers
-          onOpenCareers={() => handleOpenContactWithService("Career Opportunities")}
+          onOpenCareers={() => {
+            window.location.href = "/careers";
+          }}
         />
       </main>
 

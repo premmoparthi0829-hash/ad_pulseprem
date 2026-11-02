@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { Globe, ChevronUp, ChevronDown, ArrowUp } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Footer: React.FC = () => {
   const [langOpen, setLangOpen] = useState(false);
@@ -11,6 +13,10 @@ export const Footer: React.FC = () => {
   };
 
   const scrollToSection = (id: string) => {
+    if (id === "careers") {
+      window.location.href = "/careers";
+      return;
+    }
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
@@ -178,27 +184,12 @@ export const Footer: React.FC = () => {
           {/* COLUMN 1: BRAND LOGO + 10 YEARS EMBLEM (Matches Left Section) */}
           {/* ============================================================== */}
           <div className="md:col-span-4 flex items-center gap-5 sm:gap-6 pt-2">
-            {/* AdPulse Digital Red Geometric Parallelogram + Typography */}
+            {/* AdPulse Digital Official Brand Logo (Ultra HD) */}
             <div
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-3.5 cursor-pointer group select-none shrink-0"
+              className="cursor-pointer group select-none shrink-0"
             >
-              {/* Solid Red Slanted Parallelogram */}
-              <div
-                className="w-10 h-7 bg-[#ED1B36] group-hover:bg-[#c9122a] transition-colors shadow-md"
-                style={{
-                  transform: "skewX(-20deg)",
-                }}
-              />
-
-              <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-black tracking-tight font-heading text-white leading-none">
-                  AD PULSE
-                </span>
-                <span className="text-[10px] font-bold tracking-[0.28em] uppercase text-zinc-300 font-heading -mt-0.5">
-                  digital
-                </span>
-              </div>
+              <Logo theme="dark" showBadge={false} size="md" />
             </div>
 
             {/* Thin vertical separator line (matches screenshot) */}
@@ -220,7 +211,7 @@ export const Footer: React.FC = () => {
                       y1="0"
                       x2="0"
                       y2="4"
-                      stroke="#ED1B36"
+                      stroke="#FF5B00"
                       strokeWidth="2"
                     />
                     <line
@@ -228,7 +219,7 @@ export const Footer: React.FC = () => {
                       y1="0"
                       x2="2"
                       y2="4"
-                      stroke="#FF556B"
+                      stroke="#FF8A00"
                       strokeWidth="2"
                     />
                   </pattern>
@@ -252,32 +243,24 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* ============================================================== */}
-          {/* COLUMN 2: OUR BRAND LIST (Matches screenshot Column 1) */}
+          {/* COLUMN 2: OUR BRAND & COMPANY */}
           {/* ============================================================== */}
           <div className="md:col-span-3 space-y-3.5 pl-0 md:pl-6">
             <ul className="space-y-3.5 text-[13px] sm:text-[14px] font-normal text-zinc-200">
+              <li>
+                <Link
+                  href="/about-us/our-brand"
+                  className="hover:text-white hover:translate-x-0.5 transition-all text-left inline-block"
+                >
+                  Our Brand & Philosophy
+                </Link>
+              </li>
               <li>
                 <button
                   onClick={() => scrollToSection("scale-at-speed")}
                   className="hover:text-white hover:translate-x-0.5 transition-all text-left"
                 >
-                  Our Brand
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("approach")}
-                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
-                >
-                  Sustainability
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("big-thinkers")}
-                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
-                >
-                  Corporate Citizenship
+                  Growth Playbook
                 </button>
               </li>
               <li>
@@ -285,7 +268,15 @@ export const Footer: React.FC = () => {
                   onClick={() => scrollToSection("capabilities")}
                   className="hover:text-white hover:translate-x-0.5 transition-all text-left"
                 >
-                  Investor Relations
+                  Marketing Solutions
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("success-stories")}
+                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
+                >
+                  Client Case Studies
                 </button>
               </li>
               <li>
@@ -300,24 +291,40 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* ============================================================== */}
-          {/* COLUMN 3: NEWS LIST (Matches screenshot Column 2) */}
+          {/* COLUMN 3: MARKETING CAPABILITIES */}
           {/* ============================================================== */}
           <div className="md:col-span-2 space-y-3.5 pl-0 md:pl-4">
             <ul className="space-y-3.5 text-[13px] sm:text-[14px] font-normal text-zinc-200">
               <li>
                 <button
-                  onClick={() => scrollToSection("whats-new")}
+                  onClick={() => scrollToSection("capabilities")}
                   className="hover:text-white hover:translate-x-0.5 transition-all text-left"
                 >
-                  News
+                  Performance Ads
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("latest-thinking")}
+                  onClick={() => scrollToSection("capabilities")}
                   className="hover:text-white hover:translate-x-0.5 transition-all text-left"
                 >
-                  Events
+                  SEO & AI Search
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("capabilities")}
+                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
+                >
+                  Social & Creator
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("capabilities")}
+                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
+                >
+                  Creative & Copy
                 </button>
               </li>
               <li>
@@ -330,26 +337,10 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("success-stories")}
-                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
-                >
-                  Alumni
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("industries")}
-                  className="hover:text-white hover:translate-x-0.5 transition-all text-left"
-                >
-                  Sitemap
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => scrollToSection("contact-cta")}
                   className="hover:text-white hover:translate-x-0.5 transition-all text-left"
                 >
-                  Cookie Preferences
+                  Free Marketing Audit
                 </button>
               </li>
             </ul>
@@ -366,7 +357,7 @@ export const Footer: React.FC = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#ED1B36] transition-colors p-1"
+                className="hover:text-[#FD6E12] transition-colors p-1"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -379,7 +370,7 @@ export const Footer: React.FC = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#ED1B36] transition-colors p-1"
+                className="hover:text-[#FD6E12] transition-colors p-1"
                 aria-label="X Twitter"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -392,7 +383,7 @@ export const Footer: React.FC = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#ED1B36] transition-colors p-1"
+                className="hover:text-[#FD6E12] transition-colors p-1"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -405,7 +396,7 @@ export const Footer: React.FC = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#ED1B36] transition-colors p-1"
+                className="hover:text-[#FD6E12] transition-colors p-1"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -418,7 +409,7 @@ export const Footer: React.FC = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#ED1B36] transition-colors p-1"
+                className="hover:text-[#FD6E12] transition-colors p-1"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -440,24 +431,16 @@ export const Footer: React.FC = () => {
 
               {langOpen && (
                 <div className="absolute right-0 bottom-full mb-2 w-44 bg-[#0A0835] rounded-lg shadow-2xl border border-zinc-700 py-1 text-xs z-50">
-                  {[
-                    "English (Global)",
-                    "Español (LatAm)",
-                    "Deutsch (DACH)",
-                    "Français (Europe)",
-                    "日本語 (Asia)",
-                  ].map((l) => (
-                    <button
-                      key={l}
-                      onClick={() => {
-                        setSelectedLang(l);
-                        setLangOpen(false);
-                      }}
-                      className="w-full text-left px-3 py-1.5 hover:bg-white/10 hover:text-[#ED1B36] text-zinc-200"
-                    >
-                      {l}
-                    </button>
-                  ))}
+                  <button
+                    onClick={() => {
+                      setSelectedLang("English (Global)");
+                      setLangOpen(false);
+                    }}
+                    className="w-full text-left px-3 py-1.5 hover:bg-white/10 hover:text-[#FD6E12] text-zinc-200 flex items-center justify-between"
+                  >
+                    <span>English (Global)</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FD6E12]" />
+                  </button>
                 </div>
               )}
             </div>
@@ -516,7 +499,7 @@ export const Footer: React.FC = () => {
       <button
         onClick={scrollToTop}
         aria-label="Back to top"
-        className="absolute bottom-5 right-6 z-20 w-9 h-9 rounded-full bg-black/60 hover:bg-[#ED1B36] text-white flex items-center justify-center transition-all duration-300 border border-white/15 hover:border-transparent group"
+        className="absolute bottom-5 right-6 z-20 w-9 h-9 rounded-full bg-black/60 hover:bg-[#FD6E12] text-white flex items-center justify-center transition-all duration-300 border border-white/15 hover:border-transparent group"
       >
         <ArrowUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
       </button>

@@ -24,7 +24,7 @@ type DropdownKey = "about" | "capabilities" | "industries" | "insights" | "caree
 export const Header: React.FC<HeaderProps> = ({
   onOpenSearch,
   onOpenContact,
-  activePage,
+  activePage, 
 }) => {
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -101,7 +101,7 @@ export const Header: React.FC<HeaderProps> = ({
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-[90px]">
-          {/* Logo on Left with Red Parallelogram & 10 Years Emblem */}
+          {/* Official AdPulse AI-Powered Growth Logo & 10 Years Emblem */}
           <div
             onClick={() => {
               closeDropdowns();
@@ -128,12 +128,12 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`h-full flex items-center px-1 transition-colors uppercase relative select-none ${
                   activeDropdown === "about"
                     ? "text-black"
-                    : "text-zinc-800 hover:text-[#ED1B36]"
+                    : "text-zinc-800 hover:text-[#FD6E12]"
                 }`}
               >
                 <span>ABOUT US</span>
                 {(activeDropdown === "about" || activePage === "about") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#FD6E12]" />
                 )}
               </button>
             </div>
@@ -148,12 +148,12 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`h-full flex items-center px-1 transition-colors uppercase relative select-none ${
                   activeDropdown === "capabilities"
                     ? "text-black"
-                    : "text-zinc-800 hover:text-[#ED1B36]"
+                    : "text-zinc-800 hover:text-[#FD6E12]"
                 }`}
               >
                 <span>CAPABILITIES</span>
                 {(activeDropdown === "capabilities" || activePage === "capabilities") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#FD6E12]" />
                 )}
               </button>
             </div>
@@ -169,13 +169,13 @@ export const Header: React.FC<HeaderProps> = ({
                   activeDropdown === "industries"
                     ? "text-black"
                     : activePage === "industries"
-                    ? "text-[#ED1B36]"
-                    : "text-zinc-800 hover:text-[#ED1B36]"
+                    ? "text-[#FD6E12]"
+                    : "text-zinc-800 hover:text-[#FD6E12]"
                 }`}
               >
                 <span>INDUSTRIES</span>
                 {(activeDropdown === "industries" || activePage === "industries") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#FD6E12]" />
                 )}
               </button>
             </div>
@@ -190,12 +190,12 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`h-full flex items-center px-1 transition-colors uppercase relative select-none ${
                   activeDropdown === "insights"
                     ? "text-black"
-                    : "text-zinc-800 hover:text-[#ED1B36]"
+                    : "text-zinc-800 hover:text-[#FD6E12]"
                 }`}
               >
                 <span>INSIGHTS</span>
                 {(activeDropdown === "insights" || activePage === "insights") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#FD6E12]" />
                 )}
               </button>
             </div>
@@ -206,16 +206,16 @@ export const Header: React.FC<HeaderProps> = ({
               onMouseEnter={() => handleMouseEnter("careers")}
             >
               <button
-                onClick={() => handleNavClick("careers")}
+                onClick={() => handleNavClick("careers", "/careers")}
                 className={`h-full flex items-center px-1 transition-colors uppercase relative select-none ${
                   activeDropdown === "careers"
                     ? "text-black"
-                    : "text-zinc-800 hover:text-[#ED1B36]"
+                    : "text-zinc-800 hover:text-[#FD6E12]"
                 }`}
               >
                 <span>CAREERS</span>
                 {(activeDropdown === "careers" || activePage === "careers") && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#FD6E12]" />
                 )}
               </button>
             </div>
@@ -227,12 +227,12 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`h-full flex items-center px-1 transition-colors uppercase relative select-none ${
                   activePage === "contact"
                     ? "text-black font-bold"
-                    : "text-zinc-800 hover:text-[#ED1B36]"
+                    : "text-zinc-800 hover:text-[#FD6E12]"
                 }`}
               >
                 <span>CONTACT US</span>
                 {activePage === "contact" && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#ED1B36]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#FD6E12]" />
                 )}
               </button>
             </div>
@@ -244,7 +244,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={onOpenSearch}
               aria-label="Search"
-              className="p-2 text-zinc-700 hover:text-[#ED1B36] transition-colors cursor-pointer"
+              className="p-2 text-zinc-700 hover:text-[#FD6E12] transition-colors cursor-pointer"
             >
               <Search className="w-5 h-5 stroke-[2.2]" />
             </button>
@@ -256,23 +256,21 @@ export const Header: React.FC<HeaderProps> = ({
                 className="flex items-center gap-2 px-2.5 py-1.5 rounded-sm border border-zinc-200 hover:border-zinc-300 text-xs text-zinc-700 hover:text-zinc-900 transition-colors cursor-pointer"
               >
                 <Globe className="w-4 h-4 text-zinc-600" />
-                <span className="w-2 h-1.5 border-l-[3.5px] border-r-[3.5px] border-t-[4.5px] border-transparent border-t-[#ED1B36] inline-block ml-0.5" />
+                <span className="w-2 h-1.5 border-l-[3.5px] border-r-[3.5px] border-t-[4.5px] border-transparent border-t-[#FD6E12] inline-block ml-0.5" />
               </button>
 
               {languageMenuOpen && (
                 <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-md shadow-xl border border-zinc-200 py-1.5 z-50 text-xs animate-in fade-in duration-150">
-                  {["EN", "DE", "FR", "ES", "JP"].map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        setSelectedLanguage(lang);
-                        setLanguageMenuOpen(false);
-                      }}
-                      className="w-full text-left px-3 py-1.5 hover:bg-zinc-50 hover:text-[#ED1B36] font-semibold text-zinc-700"
-                    >
-                      {lang === "EN" ? "English" : lang}
-                    </button>
-                  ))}
+                  <button
+                    onClick={() => {
+                      setSelectedLanguage("EN");
+                      setLanguageMenuOpen(false);
+                    }}
+                    className="w-full text-left px-3 py-1.5 hover:bg-zinc-50 hover:text-[#FD6E12] font-semibold text-zinc-700 flex items-center justify-between"
+                  >
+                    <span>English</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FD6E12]" />
+                  </button>
                 </div>
               )}
             </div>
@@ -280,7 +278,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Hamburger Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-zinc-800 hover:text-[#ED1B36]"
+              className="lg:hidden p-2 text-zinc-800 hover:text-[#FD6E12]"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -328,23 +326,26 @@ export const Header: React.FC<HeaderProps> = ({
                         <li>
                           <button
                             onClick={() => handleNavClick("scale-at-speed")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Leadership
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("scale-at-speed")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => {
+                              closeDropdowns();
+                              router.push("/about-us/our-brand");
+                            }}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Our Brand
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("approach")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("scale-at-speed")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Sustainability
                           </button>
@@ -352,7 +353,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <li>
                           <button
                             onClick={() => handleNavClick("big-thinkers")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Recognition
                           </button>
@@ -360,7 +361,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <li>
                           <button
                             onClick={() => handleNavClick("success-stories")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Customer Speak
                           </button>
@@ -368,7 +369,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <li>
                           <button
                             onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Partners Ecosystem
                           </button>
@@ -376,7 +377,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <li>
                           <button
                             onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
                             Portfolio Companies
                           </button>
@@ -389,7 +390,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <div>
                         <button
                           onClick={() => handleNavClick("whats-new")}
-                          className="text-[13px] font-bold text-zinc-900 hover:text-[#ED1B36] transition-colors block"
+                          className="text-[13px] font-bold text-zinc-900 hover:text-[#FD6E12] transition-colors block"
                         >
                           News
                         </button>
@@ -398,7 +399,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <div>
                         <button
                           onClick={() => handleNavClick("scale-at-speed")}
-                          className="text-[13px] font-bold text-zinc-900 hover:text-[#ED1B36] transition-colors block"
+                          className="text-[13px] font-bold text-zinc-900 hover:text-[#FD6E12] transition-colors block"
                         >
                           Investor Relations
                         </button>
@@ -412,15 +413,15 @@ export const Header: React.FC<HeaderProps> = ({
                           <li>
                             <button
                               onClick={() => handleNavClick("careers")}
-                              className="hover:text-[#ED1B36] transition-colors"
+                              className="hover:text-[#FD6E12] transition-colors"
                             >
                               AdPulse Foundation
                             </button>
                           </li>
                           <li>
                             <button
-                              onClick={() => handleNavClick("approach")}
-                              className="hover:text-[#ED1B36] transition-colors"
+                              onClick={() => handleNavClick("scale-at-speed")}
+                              className="hover:text-[#FD6E12] transition-colors"
                             >
                               Educational Institutions
                             </button>
@@ -428,7 +429,7 @@ export const Header: React.FC<HeaderProps> = ({
                           <li>
                             <button
                               onClick={() => handleNavClick("careers")}
-                              className="hover:text-[#ED1B36] transition-colors"
+                              className="hover:text-[#FD6E12] transition-colors"
                             >
                               Individual Social Responsibility
                             </button>
@@ -439,7 +440,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <div>
                         <button
                           onClick={() => handleNavClick("scale-at-speed")}
-                          className="text-[13px] font-bold text-zinc-900 hover:text-[#ED1B36] transition-colors block"
+                          className="text-[13px] font-bold text-zinc-900 hover:text-[#FD6E12] transition-colors block"
                         >
                           Customer Centricity
                         </button>
@@ -455,10 +456,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px]"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80"
+                        src="/images/scale-at-speed/racecar-banner.jpg"
                         alt="Scale at Speed"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/20" />
@@ -470,7 +472,7 @@ export const Header: React.FC<HeaderProps> = ({
                           Scale at Speed™
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             LEARN MORE
                           </span>
                         </div>
@@ -483,10 +485,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px] border-t border-white/10"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80"
+                        src="/images/capabilities/ai.jpg"
                         alt="AI Delivered Right"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20" />
@@ -495,7 +498,7 @@ export const Header: React.FC<HeaderProps> = ({
                           AI Delivered Right
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             LEARN MORE
                           </span>
                         </div>
@@ -524,7 +527,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/banking-and-financial-services")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Banking & Financial Services
                         </button>
@@ -532,7 +535,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/communications")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Communications
                         </button>
@@ -540,7 +543,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/education")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Education
                         </button>
@@ -548,7 +551,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/energy-and-utilities")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Energy & Utilities
                         </button>
@@ -556,7 +559,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/healthcare-and-life-sciences")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Healthcare & Life Sciences
                         </button>
@@ -564,7 +567,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/hi-tech-and-software")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Hi Tech
                         </button>
@@ -572,7 +575,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/insurance")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Insurance
                         </button>
@@ -584,7 +587,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/manufacturing-and-automotive")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Manufacturing
                         </button>
@@ -592,16 +595,16 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/media-and-entertainment")}
-                          className="hover:text-[#ED1B36] font-bold text-[#ED1B36] transition-colors text-left flex items-center gap-1"
+                          className="hover:text-[#FD6E12] font-bold text-[#FD6E12] transition-colors text-left flex items-center gap-1"
                         >
                           <span>Media & Entertainment</span>
-                          <span className="text-[10px] text-[#ED1B36] font-bold">★</span>
+                          <span className="text-[10px] text-[#FD6E12] font-bold">★</span>
                         </button>
                       </li>
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/oil-and-gas")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Oil & Gas
                         </button>
@@ -609,7 +612,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/private-equity")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Private Equity
                         </button>
@@ -617,7 +620,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/professional-services")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Professional Services
                         </button>
@@ -625,7 +628,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/retail-and-consumer-goods")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Retail & Consumer Goods
                         </button>
@@ -633,7 +636,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("", "/industries/travel-and-hospitality")}
-                          className="hover:text-[#ED1B36] transition-colors text-left"
+                          className="hover:text-[#FD6E12] transition-colors text-left"
                         >
                           Travel, Transportation, Logistics & Hospitality
                         </button>
@@ -649,10 +652,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px]"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop&q=80"
+                        src="/images/capabilities/cloud.jpg"
                         alt="The Bank of Tomorrow"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/20" />
@@ -664,7 +668,7 @@ export const Header: React.FC<HeaderProps> = ({
                           The Bank of Tomorrow: A Strategic Perspective
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             READ MORE
                           </span>
                         </div>
@@ -677,10 +681,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px] border-t border-white/10"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80"
+                        src="/images/capabilities/network.jpg"
                         alt="Zero Gravity Telco Architecture"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20" />
@@ -692,7 +697,7 @@ export const Header: React.FC<HeaderProps> = ({
                           Zero Gravity Telco Architecture™
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             READ MORE
                           </span>
                         </div>
@@ -719,24 +724,24 @@ export const Header: React.FC<HeaderProps> = ({
                     <ul className="space-y-3 text-zinc-700 font-medium">
                       <li>
                         <button
-                          onClick={() => handleNavClick("careers")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          onClick={() => handleNavClick("careers", "/careers")}
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           The AdPulse Way
                         </button>
                       </li>
                       <li>
                         <button
-                          onClick={() => handleNavClick("careers")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          onClick={() => handleNavClick("careers", "/careers")}
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           Diversity & Inclusion
                         </button>
                       </li>
                       <li>
                         <button
-                          onClick={() => handleNavClick("careers")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          onClick={() => handleNavClick("careers", "/careers")}
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           Join Us
                         </button>
@@ -752,10 +757,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px]"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80"
+                        src="/images/success-stories/story-card-3-deepesh-hd.jpg"
                         alt="Outpacing Change with Rubicon 2.0"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/20" />
@@ -767,7 +773,7 @@ export const Header: React.FC<HeaderProps> = ({
                           Outpacing Change with Rubicon 2.0
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             READ MORE
                           </span>
                         </div>
@@ -780,10 +786,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px] border-t border-white/10"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80"
+                        src="/images/success-stories/story-card-1-rajesh-hd.jpg"
                         alt="Stockmann Cuts Supplier Onboarding"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20" />
@@ -795,7 +802,7 @@ export const Header: React.FC<HeaderProps> = ({
                           Stockmann Cuts Supplier Onboarding from Weeks to Hours with PIM-First Automation
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             READ MORE
                           </span>
                         </div>
@@ -819,39 +826,39 @@ export const Header: React.FC<HeaderProps> = ({
                   <div className="flex-1 p-8 lg:py-10 lg:px-4 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10 text-xs">
                     <div className="space-y-3">
                       <h3 className="text-[13px] font-bold text-zinc-900 tracking-tight">
-                        Digital Engineering & Cloud
+                        Performance & Search
                       </h3>
                       <ul className="space-y-2 text-zinc-600 font-medium">
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/performance-marketing")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Cloud Modernization & DevOps
+                            Paid Advertising (Google, Meta, LinkedIn)
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/seo")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            AI, Machine Learning & Automation
+                            Technical SEO & AI Search Engine (GEO)
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/cro")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Enterprise Microservices Architecture
+                            Conversion Rate Optimization (CRO)
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/performance-marketing")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Cybersecurity & Zero-Trust Mesh
+                            Full-Funnel Attribution & Analytics
                           </button>
                         </li>
                       </ul>
@@ -859,39 +866,39 @@ export const Header: React.FC<HeaderProps> = ({
 
                     <div className="space-y-3">
                       <h3 className="text-[13px] font-bold text-zinc-900 tracking-tight">
-                        Experience & Growth
+                        Brand, Creative & Social
                       </h3>
                       <ul className="space-y-2 text-zinc-600 font-medium">
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/social-media")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Full-Funnel Growth Marketing
+                            Social Media & Creator Marketing
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/brand-design")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Next-Gen Headless Commerce
+                            High-Converting Ad Creatives & Video
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/ai-automation")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Spatial Computing & Virtual Production
+                            AI Marketing Automation & CRM
                           </button>
                         </li>
                         <li>
                           <button
-                            onClick={() => handleNavClick("capabilities")}
-                            className="hover:text-[#ED1B36] transition-colors"
+                            onClick={() => handleNavClick("", "/capabilities/web-growth")}
+                            className="hover:text-[#FD6E12] transition-colors"
                           >
-                            Data Intelligence & Analytics
+                            E-Commerce Web Growth Platforms
                           </button>
                         </li>
                       </ul>
@@ -900,14 +907,15 @@ export const Header: React.FC<HeaderProps> = ({
 
                   <div className="w-full lg:w-[360px] shrink-0 border-l border-zinc-100 flex flex-col">
                     <div
-                      onClick={() => handleNavClick("capabilities")}
+                      onClick={() => handleNavClick("", "/capabilities/performance-marketing")}
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px]"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80"
+                        src="/images/capabilities/engineering.jpg"
                         alt="Core Practice"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/20" />
@@ -916,38 +924,39 @@ export const Header: React.FC<HeaderProps> = ({
                           Core Practice
                         </span>
                         <h4 className="text-base font-black font-heading text-white leading-snug tracking-tight">
-                          Scale at Speed™ Cloud Migration
+                          Scale at Speed™ Growth Marketing
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
-                            EXPLORE ALL 12 CAPABILITIES
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
+                            EXPLORE ALL MARKETING SERVICES
                           </span>
                         </div>
                       </div>
                     </div>
 
                     <div
-                      onClick={() => handleNavClick("featured-story")}
+                      onClick={() => handleNavClick("", "/capabilities/seo")}
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px] border-t border-white/10"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80"
+                        src="/images/capabilities/digital-apps.jpg"
                         alt="Sovereign AI Engine"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20" />
                       <div className="relative z-10 space-y-1">
                         <span className="text-[11px] font-semibold text-white/90 border-b border-white/60 pb-0.5 inline-block w-fit">
-                          Innovation Lab
+                          Organic Dominance
                         </span>
                         <h4 className="text-base font-black font-heading text-white leading-snug tracking-tight">
-                          Sovereign AI Engine for Global Enterprise
+                          AI Search & Enterprise SEO Engine
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
-                            READ FRAMEWORK
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
+                            VIEW SEO SOLUTIONS
                           </span>
                         </div>
                       </div>
@@ -972,7 +981,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("featured-story")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           Executive Podcast & Dispatches
                         </button>
@@ -980,7 +989,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("latest-thinking")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           Latest Thinking & Research
                         </button>
@@ -988,7 +997,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("success-stories")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           Enterprise Case Studies
                         </button>
@@ -996,7 +1005,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li>
                         <button
                           onClick={() => handleNavClick("whats-new")}
-                          className="hover:text-[#ED1B36] transition-colors text-sm font-semibold"
+                          className="hover:text-[#FD6E12] transition-colors text-sm font-semibold"
                         >
                           Global Announcements & Press
                         </button>
@@ -1010,10 +1019,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px]"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80"
+                        src="/images/podcast-banner-full.png"
                         alt="Sovereign AI Podcast"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/20" />
@@ -1025,7 +1035,7 @@ export const Header: React.FC<HeaderProps> = ({
                           Sovereign AI: Why Strategy Beats Hype
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             LISTEN NOW
                           </span>
                         </div>
@@ -1037,10 +1047,11 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex-1 relative overflow-hidden group cursor-pointer p-7 flex flex-col justify-end min-h-[175px] border-t border-white/10"
                     >
                       <Image
-                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80"
+                        src="/images/capabilities/consulting.jpg"
                         alt="The Enterprise CMO Playbook"
                         fill
                         sizes="400px"
+                        unoptimized
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20" />
@@ -1052,7 +1063,7 @@ export const Header: React.FC<HeaderProps> = ({
                           The Enterprise CMO Playbook for 2026
                         </h4>
                         <div className="pt-1">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#ED1B36] transition-colors">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/90 group-hover:text-[#FD6E12] transition-colors">
                             READ REPORT
                           </span>
                         </div>
@@ -1079,7 +1090,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className="w-full text-left font-black text-lg text-zinc-900 py-2 border-b border-zinc-100 flex items-center justify-between"
                 >
                   <span>ABOUT US</span>
-                  <ArrowRight className="w-4 h-4 text-[#ED1B36]" />
+                  <ArrowRight className="w-4 h-4 text-[#FD6E12]" />
                 </button>
               </div>
 
@@ -1089,7 +1100,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className="w-full text-left font-black text-lg text-zinc-900 py-2 border-b border-zinc-100 flex items-center justify-between"
                 >
                   <span>CAPABILITIES</span>
-                  <ArrowRight className="w-4 h-4 text-[#ED1B36]" />
+                  <ArrowRight className="w-4 h-4 text-[#FD6E12]" />
                 </button>
               </div>
 
@@ -1099,12 +1110,12 @@ export const Header: React.FC<HeaderProps> = ({
                   className="w-full text-left font-black text-lg text-zinc-900 py-2 border-b border-zinc-100 flex items-center justify-between"
                 >
                   <span>INDUSTRIES</span>
-                  <ArrowRight className="w-4 h-4 text-[#ED1B36]" />
+                  <ArrowRight className="w-4 h-4 text-[#FD6E12]" />
                 </button>
                 <div className="pl-4 py-2 space-y-2 text-xs font-semibold text-zinc-600">
                   <button
                     onClick={() => handleNavClick("", "/industries/media-and-entertainment")}
-                    className="block text-[#ED1B36]"
+                    className="block text-[#FD6E12]"
                   >
                     • Media & Entertainment
                   </button>
@@ -1147,7 +1158,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className="w-full text-left font-black text-lg text-zinc-900 py-2 border-b border-zinc-100 flex items-center justify-between"
                 >
                   <span>INSIGHTS</span>
-                  <ArrowRight className="w-4 h-4 text-[#ED1B36]" />
+                  <ArrowRight className="w-4 h-4 text-[#FD6E12]" />
                 </button>
               </div>
 
@@ -1157,7 +1168,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className="w-full text-left font-black text-lg text-zinc-900 py-2 border-b border-zinc-100 flex items-center justify-between"
                 >
                   <span>CAREERS</span>
-                  <ArrowRight className="w-4 h-4 text-[#ED1B36]" />
+                  <ArrowRight className="w-4 h-4 text-[#FD6E12]" />
                 </button>
               </div>
 
@@ -1167,10 +1178,10 @@ export const Header: React.FC<HeaderProps> = ({
                     setMobileMenuOpen(false);
                     onOpenContact();
                   }}
-                  className="w-full text-left font-black text-lg text-[#ED1B36] py-2 border-b border-zinc-100 flex items-center justify-between"
+                  className="w-full text-left font-black text-lg text-[#FD6E12] py-2 border-b border-zinc-100 flex items-center justify-between"
                 >
                   <span>CONTACT US</span>
-                  <ArrowRight className="w-4 h-4 text-[#ED1B36]" />
+                  <ArrowRight className="w-4 h-4 text-[#FD6E12]" />
                 </button>
               </div>
             </div>
@@ -1181,7 +1192,7 @@ export const Header: React.FC<HeaderProps> = ({
                   setMobileMenuOpen(false);
                   onOpenContact();
                 }}
-                className="w-full py-4 rounded-full bg-[#ED1B36] text-white font-extrabold text-xs uppercase tracking-widest text-center shadow-lg"
+                className="w-full py-4 rounded-full bg-[#FD6E12] text-white font-extrabold text-xs uppercase tracking-widest text-center shadow-lg"
               >
                 Let&apos;s Talk Business →
               </button>

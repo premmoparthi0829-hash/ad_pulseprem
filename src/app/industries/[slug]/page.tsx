@@ -39,7 +39,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#242321] selection:bg-[#ED1B36] selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-white text-[#242321] selection:bg-[#FD6E12] selection:text-white relative">
       {/* 
         ======================================================================
         01. GLOBAL NAVIGATION HEADER (Active on INDUSTRIES tab)
@@ -61,14 +61,14 @@ export default function IndustryPage({ params }: IndustryPageProps) {
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center gap-2 text-xs font-medium text-zinc-500">
             <Link
               href="/"
-              className="hover:text-[#ED1B36] transition-colors"
+              className="hover:text-[#FD6E12] transition-colors"
             >
               Home
             </Link>
             <span className="text-zinc-400">›</span>
             <Link
               href="/#industries"
-              className="text-[#ED1B36] font-semibold hover:underline"
+              className="text-[#FD6E12] font-semibold hover:underline"
             >
               Industries
             </Link>
@@ -107,7 +107,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
               {/* Left Column: Title & Tagline */}
               <div className="lg:col-span-6 px-6 sm:px-8 lg:pl-12 lg:pr-8 py-14 lg:py-20 flex flex-col justify-center">
                 <div className="space-y-3 max-w-xl">
-                  <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-black font-heading text-[#242321] tracking-tight leading-[1.12]">
+                  <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-black font-heading text-[#01286D] tracking-tight leading-[1.12]">
                     {industry.title}
                   </h1>
                   <p className="text-base sm:text-lg lg:text-xl text-zinc-700 font-medium tracking-normal pt-1">
@@ -119,14 +119,14 @@ export default function IndustryPage({ params }: IndustryPageProps) {
                 <div className="pt-8 flex items-center gap-4">
                   <button
                     onClick={scrollToContact}
-                    className="px-6 py-3 rounded-full bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs sm:text-sm font-bold uppercase tracking-wider flex items-center gap-2 shadow-md transition-all duration-200 group"
+                    className="px-6 py-3 rounded-full bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs sm:text-sm font-bold uppercase tracking-wider flex items-center gap-2 shadow-md transition-all duration-200 group cursor-pointer"
                   >
                     <span>Connect with Specialists</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <a
                     href="#offerings"
-                    className="text-xs sm:text-sm font-bold text-zinc-700 hover:text-[#ED1B36] transition-colors uppercase tracking-wider"
+                    className="text-xs sm:text-sm font-bold text-zinc-700 hover:text-[#FD6E12] transition-colors uppercase tracking-wider"
                   >
                     View Offerings ↓
                   </a>
@@ -166,10 +166,10 @@ export default function IndustryPage({ params }: IndustryPageProps) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               {/* Left Column: Bold Headline */}
               <div className="lg:col-span-5">
-                <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#242321] leading-[1.18] tracking-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#01286D] leading-[1.18] tracking-tight">
                   {industry.editorialHeadline}
                 </h2>
-                <div className="w-16 h-1 bg-[#ED1B36] mt-6" />
+                <div className="w-16 h-1 bg-[#FD6E12] mt-6" />
               </div>
 
               {/* Right Column: Editorial Paragraph + MORE + Toggle */}
@@ -189,13 +189,13 @@ export default function IndustryPage({ params }: IndustryPageProps) {
                 <div className="pt-2">
                   <button
                     onClick={() => setIsEditorialExpanded(!isEditorialExpanded)}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-black uppercase tracking-widest text-[#242321] hover:text-[#ED1B36] transition-colors select-none group"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-black uppercase tracking-widest text-[#01286D] hover:text-[#FD6E12] transition-colors select-none group cursor-pointer"
                   >
                     <span>{isEditorialExpanded ? "LESS" : "MORE"}</span>
                     {isEditorialExpanded ? (
-                      <Minus className="w-4 h-4 text-[#ED1B36]" />
+                      <Minus className="w-4 h-4 text-[#FD6E12]" />
                     ) : (
-                      <Plus className="w-4 h-4 text-[#ED1B36] group-hover:rotate-90 transition-transform" />
+                      <Plus className="w-4 h-4 text-[#FD6E12] group-hover:rotate-90 transition-transform" />
                     )}
                   </button>
                 </div>
@@ -212,7 +212,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
         <section id="offerings" className="py-20 lg:py-28 bg-[#EFEAE1] border-b border-zinc-200/80">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="mb-12">
-              <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#242321] tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#01286D] tracking-tight">
                 {industry.offeringsTitle}
               </h2>
             </div>
@@ -226,7 +226,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
                   onClick={scrollToContact}
                 >
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-[19px] font-bold font-heading text-[#242321] group-hover:text-[#ED1B36] transition-colors leading-snug">
+                    <h3 className="text-lg sm:text-[19px] font-bold font-heading text-[#242321] group-hover:text-[#FD6E12] transition-colors leading-snug">
                       {offering.title}
                     </h3>
                     <p className="text-xs sm:text-[13px] text-zinc-600 leading-relaxed font-normal">
@@ -240,7 +240,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
                         e.stopPropagation();
                         scrollToContact();
                       }}
-                      className="text-[11px] font-black tracking-widest uppercase text-zinc-900 group-hover:text-[#ED1B36] transition-colors"
+                      className="text-[11px] font-black tracking-widest uppercase text-zinc-900 group-hover:text-[#FD6E12] transition-colors cursor-pointer"
                     >
                       LEARN MORE
                     </button>
@@ -256,13 +256,13 @@ export default function IndustryPage({ params }: IndustryPageProps) {
           06. SECTION: CAPTURE VALUE IN ATTENTION ECONOMY (Screenshot 2 Match)
           ======================================================================
         */}
-        <section className="relative py-20 lg:py-28 bg-[#580020] text-white overflow-hidden">
-          {/* Signature Red Diagonal Stripe Hatching Background */}
+        <section className="relative py-20 lg:py-28 bg-[#01286D] text-white overflow-hidden">
+          {/* Signature Orange Diagonal Stripe Hatching Background */}
           <div
             className="absolute inset-0 pointer-events-none opacity-30"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(-35deg, rgba(237, 27, 54, 0.4) 0px, rgba(237, 27, 54, 0.4) 1px, transparent 1px, transparent 18px)",
+                "repeating-linear-gradient(-35deg, rgba(253, 110, 18, 0.4) 0px, rgba(253, 110, 18, 0.4) 1px, transparent 1px, transparent 18px)",
             }}
           />
 
@@ -281,13 +281,13 @@ export default function IndustryPage({ params }: IndustryPageProps) {
               {/* Right Column: Inset White Card */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="w-full max-w-md bg-white p-10 sm:p-12 shadow-2xl space-y-8 flex flex-col justify-between">
-                  <h3 className="text-2xl sm:text-3xl font-black font-heading text-[#242321] tracking-tight leading-snug">
+                  <h3 className="text-2xl sm:text-3xl font-black font-heading text-[#01286D] tracking-tight leading-snug">
                     {industry.valueCardTitle}
                   </h3>
                   <div>
                     <button
                       onClick={scrollToContact}
-                      className="px-8 py-3.5 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs font-black uppercase tracking-widest transition-colors shadow-md"
+                      className="px-8 py-3.5 bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs font-black uppercase tracking-widest transition-colors shadow-md cursor-pointer"
                     >
                       LEARN MORE
                     </button>
@@ -306,7 +306,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
         <section className="py-20 lg:py-28 bg-[#EFEAE1] border-b border-zinc-200/80">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="mb-12">
-              <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#242321] tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#01286D] tracking-tight">
                 {industry.subIndustriesTitle}
               </h2>
             </div>
@@ -322,7 +322,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
                     onClick={() => setActiveSubIndustry(sub.id)}
                     className={`bg-white p-8 sm:p-9 flex flex-col justify-between min-h-[310px] transition-all duration-200 cursor-pointer ${
                       isSelected
-                        ? "border-b-4 border-[#ED1B36] shadow-lg"
+                        ? "border-b-4 border-[#FD6E12] shadow-lg"
                         : "border-b-4 border-transparent hover:shadow-md"
                     }`}
                   >
@@ -341,8 +341,8 @@ export default function IndustryPage({ params }: IndustryPageProps) {
                           e.stopPropagation();
                           scrollToContact();
                         }}
-                        className={`text-[11px] font-black tracking-widest uppercase transition-colors ${
-                          isSelected ? "text-[#ED1B36]" : "text-zinc-900 hover:text-[#ED1B36]"
+                        className={`text-[11px] font-black tracking-widest uppercase transition-colors cursor-pointer ${
+                          isSelected ? "text-[#FD6E12]" : "text-zinc-900 hover:text-[#FD6E12]"
                         }`}
                       >
                         LEARN MORE

@@ -11,12 +11,12 @@ export const OurApproach: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="max-w-3xl mb-16">
-          <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#ED1B36] block mb-2">
+          <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#FD6E12] block mb-2">
             METHODOLOGY & FRAMEWORK
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#242321] tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#01286D] tracking-tight leading-tight">
             More Than Marketing. <br />
-            <span className="text-[#ED1B36]">We Create Momentum.</span>
+            <span className="text-[#FD6E12]">We Create Momentum.</span>
           </h2>
           <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed mt-4">
             Our systematic, data-calibrated delivery engine ensures every dollar
@@ -33,19 +33,19 @@ export const OurApproach: React.FC = () => {
               <button
                 key={step.step}
                 onClick={() => setActiveStep(idx)}
-                className={`p-4 rounded-xl text-left border transition-all duration-300 relative ${
+                className={`p-4 rounded-xl text-left border transition-all duration-300 relative cursor-pointer ${
                   isActive
-                    ? "bg-[#09082F] text-white border-[#09082F] shadow-lg scale-102"
+                    ? "bg-[#01286D] text-white border-[#01286D] shadow-lg scale-102"
                     : "bg-white text-zinc-700 border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50"
                 }`}
               >
                 {/* Active indicator bar */}
                 {isActive && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#ED1B36] rounded-t-xl" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#FD6E12] rounded-t-xl" />
                 )}
                 <span
                   className={`text-2xl font-black font-heading block ${
-                    isActive ? "text-[#ED1B36]" : "text-zinc-400"
+                    isActive ? "text-[#FD6E12]" : "text-zinc-400"
                   }`}
                 >
                   {step.step}
@@ -62,14 +62,14 @@ export const OurApproach: React.FC = () => {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-zinc-200/90 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300">
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-3">
-              <span className="text-4xl sm:text-5xl font-black font-heading text-[#ED1B36]">
+              <span className="text-4xl sm:text-5xl font-black font-heading text-[#FD6E12]">
                 {approachSteps[activeStep].step}
               </span>
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-zinc-400 block">
                   PHASE {approachSteps[activeStep].step} OF 05
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-zinc-900">
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-[#01286D]">
                   {approachSteps[activeStep].title}
                 </h3>
               </div>
@@ -93,7 +93,7 @@ export const OurApproach: React.FC = () => {
                     key={i}
                     className="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100 text-xs font-medium text-zinc-800"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-[#ED1B36] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#FD6E12] shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -101,12 +101,12 @@ export const OurApproach: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 bg-[#09082F] text-white rounded-2xl p-8 space-y-6 relative overflow-hidden">
+          <div className="lg:col-span-5 bg-[#01286D] text-white rounded-2xl p-8 space-y-6 relative overflow-hidden">
             {/* Geometric pattern overlay */}
             <div className="absolute inset-0 bg-isometric-grid opacity-20 pointer-events-none" />
 
             <div className="relative z-10 space-y-4">
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#ED1B36]">
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#FD6E12]">
                 ACCELERATION PROTOCOL
               </span>
               <h4 className="text-xl font-bold font-heading">
@@ -123,7 +123,7 @@ export const OurApproach: React.FC = () => {
                   onClick={() =>
                     setActiveStep((prev) => (prev + 1) % approachSteps.length)
                   }
-                  className="text-[#ED1B36] font-bold uppercase flex items-center gap-1 hover:underline"
+                  className="text-[#FD6E12] font-bold uppercase flex items-center gap-1 hover:underline cursor-pointer"
                 >
                   Step {approachSteps[(activeStep + 1) % approachSteps.length].step} -{" "}
                   {approachSteps[(activeStep + 1) % approachSteps.length].title}

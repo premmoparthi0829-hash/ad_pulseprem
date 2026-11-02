@@ -1,61 +1,68 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 interface LogoProps {
   theme?: "light" | "dark";
   showBadge?: boolean;
   className?: string;
+  size?: "sm" | "md" | "lg";
 }
 
 export const Logo: React.FC<LogoProps> = ({
   theme = "light",
   showBadge = true,
   className = "",
+  size = "md",
 }) => {
   const isDark = theme === "dark";
 
-  return (
-    <div className={`flex items-center gap-4 select-none ${className}`}>
-      {/* Solid Red Slanted Parallelogram (Signature Visual Geometry) */}
-      <div
-        className="w-11 h-7 sm:w-14 sm:h-8 bg-[#ED1B36] transition-transform duration-200 group-hover:scale-105 shadow-sm shrink-0"
-        style={{
-          transform: "skewX(-20deg)",
-        }}
-      />
+  const heightClass =
+    size === "sm"
+      ? "h-8 sm:h-9"
+      : size === "lg"
+      ? "h-12 sm:h-14"
+      : "h-10 sm:h-[48px] lg:h-[52px]";
 
-      {/* Brand Typography */}
-      <div className="flex flex-col justify-center">
-        <div className="flex items-center tracking-tight">
-          <span
-            className={`text-xl sm:text-[22px] font-black tracking-tight font-heading leading-none ${
-              isDark ? "text-white" : "text-[#111827]"
-            }`}
-          >
-            AD PULSE
-          </span>
-        </div>
-        <span
-          className={`text-[9.5px] sm:text-[10px] font-bold tracking-[0.28em] uppercase font-heading ${
-            isDark ? "text-zinc-400" : "text-zinc-600"
-          }`}
-        >
-          digital
-        </span>
+  return (
+    <div className={`flex items-center gap-3.5 sm:gap-4 select-none ${className}`}>
+      {/* Official AdPulse AI-Powered Growth Logo (Ultra HD Display) */}
+      <div className="relative shrink-0 flex items-center">
+        <Image
+          src={isDark ? "/images/logo/adpulse-logo-ultra-hd-dark.png" : "/images/logo/adpulse-logo-ultra-hd-light.png"}
+          alt="AdPulse Digital - AI-Powered Growth"
+          width={210}
+          height={64}
+          unoptimized={true}
+          priority
+          className={`${heightClass} w-auto object-contain transition-transform duration-200 group-hover:scale-105`}
+        />
       </div>
 
       {showBadge && (
-        <div className="hidden sm:flex items-center pl-4 border-l border-zinc-200 shrink-0 ml-1">
+        <div
+          className={`hidden sm:flex items-center pl-4 sm:pl-5 border-l ${
+            isDark ? "border-white/20" : "border-zinc-200"
+          } shrink-0`}
+        >
           {/* 10 Years of Innovation Emblem */}
           <div className="flex items-center gap-2">
-            <span className="text-2xl sm:text-3xl font-black font-heading text-[#111827] leading-none tracking-tighter">
+            <span
+              className={`text-2xl sm:text-[28px] font-black font-heading leading-none tracking-tight ${
+                isDark ? "text-white" : "text-[#01286D]"
+              }`}
+            >
               10
             </span>
             <div className="flex flex-col justify-center -space-y-0.5">
-              <span className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-zinc-500 leading-tight">
+              <span
+                className={`text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wider leading-tight ${
+                  isDark ? "text-zinc-400" : "text-zinc-500"
+                }`}
+              >
                 Years of
               </span>
-              <span className="text-[8.5px] sm:text-[9.5px] font-black uppercase tracking-wider text-[#ED1B36] leading-tight">
+              <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-[#FD6E12] leading-tight">
                 AdPulse
               </span>
             </div>

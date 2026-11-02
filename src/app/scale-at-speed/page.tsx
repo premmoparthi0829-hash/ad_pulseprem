@@ -46,7 +46,7 @@ export default function ScaleAtSpeedPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F6F2EA] text-[#242321] selection:bg-[#ED1B36] selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-[#F6F2EA] text-[#242321] selection:bg-[#FD6E12] selection:text-white relative">
       {/* 00. Global Sticky Header */}
       <Header
         onOpenSearch={() => setIsSearchOpen(true)}
@@ -174,7 +174,7 @@ export default function ScaleAtSpeedPage() {
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 space-y-12 sm:space-y-16">
             {/* Section Headings */}
             <div className="space-y-1">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-[#ED1B36] tracking-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-[#FD6E12] tracking-tight">
                 Be Future-Ready
               </h2>
               <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-white tracking-tight">
@@ -290,7 +290,7 @@ export default function ScaleAtSpeedPage() {
               <motion.div
                 animate={{ x: ["-100%", "300%"] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-[#ED1B36] to-transparent opacity-70"
+                className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-[#FD6E12] to-transparent opacity-70"
               />
             </div>
 
@@ -301,8 +301,6 @@ export default function ScaleAtSpeedPage() {
                 className="inline-block"
               >
                 <motion.div
-                  animate={{ x: [-12, 18, -12] }}
-                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                   initial={{ y: "100%", opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
@@ -315,13 +313,13 @@ export default function ScaleAtSpeedPage() {
                       scale: 1.03,
                       transition: { duration: 0.25, ease: "easeOut" },
                     }}
-                    className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-heading text-zinc-950 group-hover:text-[#ED1B36] tracking-tight transition-colors duration-300"
+                    className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-heading text-zinc-950 group-hover:text-[#FD6E12] tracking-tight transition-colors duration-300"
                   >
                     Embrace
                   </motion.h2>
 
-                  {/* High velocity aerodynamic red badge / indicator */}
-                  <span className="w-3.5 h-3.5 sm:w-5 sm:h-5 bg-[#ED1B36] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-[0_0_12px_#ED1B36]" />
+                  {/* High velocity aerodynamic orange badge / indicator */}
+                  <span className="w-3.5 h-3.5 sm:w-5 sm:h-5 bg-[#FD6E12] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-[0_0_12px_#FD6E12]" />
                 </motion.div>
               </motion.div>
             </div>
@@ -338,7 +336,7 @@ export default function ScaleAtSpeedPage() {
               <motion.div
                 animate={{ x: ["300%", "-100%"] }}
                 transition={{ repeat: Infinity, duration: 4.5, delay: 1, ease: "easeInOut" }}
-                className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-[#ED1B36] to-transparent opacity-70"
+                className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-[#FD6E12] to-transparent opacity-70"
               />
             </div>
 
@@ -349,16 +347,14 @@ export default function ScaleAtSpeedPage() {
                 className="inline-block"
               >
                 <motion.div
-                  animate={{ x: [12, -18, 12] }}
-                  transition={{ repeat: Infinity, duration: 6.5, ease: "easeInOut" }}
                   initial={{ y: "100%", opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
                   className="group inline-flex items-center gap-4 cursor-pointer select-none"
                 >
-                  {/* High velocity aerodynamic red badge / indicator */}
-                  <span className="w-3.5 h-3.5 sm:w-5 sm:h-5 bg-[#ED1B36] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-[0_0_12px_#ED1B36]" />
+                  {/* High velocity aerodynamic orange badge / indicator */}
+                  <span className="w-3.5 h-3.5 sm:w-5 sm:h-5 bg-[#FD6E12] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-[0_0_12px_#FD6E12]" />
 
                   <motion.h2
                     whileHover={{
@@ -366,7 +362,7 @@ export default function ScaleAtSpeedPage() {
                       scale: 1.03,
                       transition: { duration: 0.25, ease: "easeOut" },
                     }}
-                    className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-heading text-zinc-950 group-hover:text-[#ED1B36] tracking-tight text-right transition-colors duration-300"
+                    className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-heading text-zinc-950 group-hover:text-[#FD6E12] tracking-tight text-right transition-colors duration-300"
                   >
                     Scale at Speed
                   </motion.h2>
@@ -386,7 +382,7 @@ export default function ScaleAtSpeedPage() {
               <motion.div
                 animate={{ x: ["-100%", "300%"] }}
                 transition={{ repeat: Infinity, duration: 4, delay: 0.5, ease: "easeInOut" }}
-                className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-[#ED1B36] to-transparent opacity-70"
+                className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-[#FD6E12] to-transparent opacity-70"
               />
             </div>
           </div>
@@ -417,8 +413,8 @@ export default function ScaleAtSpeedPage() {
                           height="24"
                           patternUnits="userSpaceOnUse"
                         >
-                          <line x1="0" y1="0" x2="24" y2="0" stroke="#ED1B36" strokeWidth="0.8" />
-                          <line x1="0" y1="0" x2="0" y2="24" stroke="#ED1B36" strokeWidth="0.8" />
+                          <line x1="0" y1="0" x2="24" y2="0" stroke="#FD6E12" strokeWidth="0.8" />
+                          <line x1="0" y1="0" x2="0" y2="24" stroke="#FD6E12" strokeWidth="0.8" />
                         </pattern>
                       </defs>
                       <rect width="100%" height="100%" fill="url(#red-ceo-grid)" />
@@ -439,10 +435,10 @@ export default function ScaleAtSpeedPage() {
                 </div>
               </div>
 
-              {/* Right Column: Red Quote & Mission Details */}
+              {/* Right Column: Orange Quote & Mission Details */}
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-[#ED1B36] font-serif font-black text-4xl sm:text-5xl leading-none">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 text-[#FD6E12] font-serif font-black text-4xl sm:text-5xl leading-none">
                     &ldquo;&ldquo;
                   </div>
                   <blockquote className="text-base sm:text-lg lg:text-xl text-zinc-800 font-normal leading-relaxed">
@@ -463,7 +459,7 @@ export default function ScaleAtSpeedPage() {
                   <div>
                     <button
                       onClick={() => setIsContactOpen(true)}
-                      className="px-7 py-3 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-sm cursor-pointer"
+                      className="px-7 py-3 bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-sm cursor-pointer"
                     >
                       KNOW MORE
                     </button>
@@ -490,7 +486,7 @@ export default function ScaleAtSpeedPage() {
                 We move beyond vision and experimentation to deliver practical, secure, scalable AI solutions that drive real business outcomes. AdPulse Digital is positioned as an Emerging Leader in the 2025 Gartner® Emerging Market Quadrant Innovation Guide for GenAI Consulting and Implementation Services. Partner with us to unlock AI&apos;s full potential for your business from concept to completion. Experience innovation with{" "}
                 <button
                   onClick={() => setIsContactOpen(true)}
-                  className="underline hover:text-[#ED1B36] font-semibold text-white transition-colors duration-200 cursor-pointer"
+                  className="underline hover:text-[#FD6E12] font-semibold text-white transition-colors duration-200 cursor-pointer"
                 >
                   &lsquo;AI Delivered Right&rsquo;
                 </button>
@@ -651,7 +647,7 @@ export default function ScaleAtSpeedPage() {
                   return (
                     <div
                       key={card.id}
-                      className="lg:w-[38%] xl:w-[39%] flex-shrink-0 bg-[#F6F2EA] text-[#111827] border border-zinc-200 border-b-4 border-b-[#ED1B36] p-8 sm:p-9 lg:p-10 flex flex-col justify-between shadow-2xl transition-all duration-300 relative min-h-[480px] lg:min-h-[520px]"
+                      className="lg:w-[38%] xl:w-[39%] flex-shrink-0 bg-[#F6F2EA] text-[#111827] border border-zinc-200 border-b-4 border-b-[#FD6E12] p-8 sm:p-9 lg:p-10 flex flex-col justify-between shadow-2xl transition-all duration-300 relative min-h-[480px] lg:min-h-[520px]"
                     >
                       <div>
                         {/* Top Header: Icon on Left, Clean Minus on Right */}
@@ -660,7 +656,7 @@ export default function ScaleAtSpeedPage() {
                           <button
                             onClick={() => setActiveAICard(0)}
                             aria-label="Collapse card"
-                            className="text-zinc-800 hover:text-[#ED1B36] text-3xl font-light leading-none transition-colors cursor-pointer p-1"
+                            className="text-zinc-800 hover:text-[#FD6E12] text-3xl font-light leading-none transition-colors cursor-pointer p-1"
                           >
                             &minus;
                           </button>
@@ -709,7 +705,7 @@ export default function ScaleAtSpeedPage() {
             <div className="pt-2">
               <button
                 onClick={() => setIsContactOpen(true)}
-                className="px-8 py-3.5 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md cursor-pointer inline-flex items-center gap-2"
+                className="px-8 py-3.5 bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md cursor-pointer inline-flex items-center gap-2"
               >
                 KNOW MORE
               </button>
@@ -722,14 +718,14 @@ export default function ScaleAtSpeedPage() {
           07. SECTION 07: CAREERS & CULTURE (Limitless Together)
           ======================================================================
         */}
-        <Careers onOpenCareers={() => setIsContactOpen(true)} />
+        <Careers onOpenCareers={() => { window.location.href = "/careers"; }} />
       </main>
 
       {/* Floating Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-zinc-800/80 hover:bg-[#ED1B36] text-white flex items-center justify-center transition-all duration-200 shadow-lg backdrop-blur-sm cursor-pointer"
+        className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-zinc-800/80 hover:bg-[#FD6E12] text-white flex items-center justify-center transition-all duration-200 shadow-lg backdrop-blur-sm cursor-pointer"
       >
         <ArrowUp className="w-5 h-5" />
       </button>

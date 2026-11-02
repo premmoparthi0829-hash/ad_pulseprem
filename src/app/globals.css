@@ -2,12 +2,19 @@
 
 @layer base {
   :root {
-    --font-heading: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-manrope: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: var(--font-manrope);
+    --font-body: var(--font-inter);
     
-    --color-adpulse-red: #ED1B36;
-    --color-deep-burgundy: #650025;
-    --color-midnight-navy: #09082F;
+    /* Official AdPulse Brand Identity Palette */
+    --color-adpulse-orange: #FD6E12;
+    --color-adpulse-blue: #01286D;
+    
+    /* Aliases for seamless legacy support */
+    --color-adpulse-red: #FD6E12;
+    --color-deep-burgundy: #01286D;
+    --color-midnight-navy: #01286D;
     --color-warm-ivory: #F4F0E7;
     --color-charcoal: #242321;
     --color-light-grey: #F5F5F5;
@@ -26,29 +33,41 @@
   }
 }
 
-/* Custom pattern utilities */
+/* Custom brand utilities */
 .bg-warm-ivory {
   background-color: #F4F0E7;
 }
 
-.bg-deep-burgundy {
-  background-color: #650025;
+.bg-deep-burgundy,
+.bg-adpulse-blue {
+  background-color: #01286D;
+}
+
+.text-adpulse-blue {
+  color: #01286D;
+}
+
+.border-adpulse-blue {
+  border-color: #01286D;
 }
 
 .bg-midnight-navy {
-  background-color: #09082F;
+  background-color: #011E52;
 }
 
+.text-adpulse-orange,
 .text-adpulse-red {
-  color: #ED1B36;
+  color: #FD6E12;
 }
 
+.bg-adpulse-orange,
 .bg-adpulse-red {
-  background-color: #ED1B36;
+  background-color: #FD6E12;
 }
 
+.border-adpulse-orange,
 .border-adpulse-red {
-  border-color: #ED1B36;
+  border-color: #FD6E12;
 }
 
 /* AdPulse Digital subtle vertical pinstripes */

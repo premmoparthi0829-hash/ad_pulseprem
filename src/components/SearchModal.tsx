@@ -85,7 +85,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
       >
         {/* Search Input Bar */}
         <div className="flex items-center px-6 py-5 border-b border-zinc-100 gap-3">
-          <Search className="w-6 h-6 text-[#ED1B36] shrink-0" />
+          <Search className="w-6 h-6 text-[#FD6E12] shrink-0" />
           <input
             type="text"
             placeholder="Search capabilities, industries, insights, case studies..."
@@ -96,7 +96,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           />
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-zinc-100 text-zinc-400 hover:text-zinc-700 transition-colors"
+            className="p-1.5 rounded-full hover:bg-zinc-100 text-zinc-400 hover:text-zinc-700 transition-colors cursor-pointer"
             aria-label="Close search"
           >
             <X className="w-5 h-5" />
@@ -110,25 +110,25 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           </span>
           <button
             onClick={() => handleSelect("capabilities")}
-            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#ED1B36] hover:text-[#ED1B36] transition-colors"
+            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#FD6E12] hover:text-[#FD6E12] transition-colors cursor-pointer"
           >
             Capabilities
           </button>
           <button
             onClick={() => handleSelect("industries")}
-            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#ED1B36] hover:text-[#ED1B36] transition-colors"
+            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#FD6E12] hover:text-[#FD6E12] transition-colors cursor-pointer"
           >
             Industries
           </button>
           <button
             onClick={() => handleSelect("success-stories")}
-            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#ED1B36] hover:text-[#ED1B36] transition-colors"
+            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#FD6E12] hover:text-[#FD6E12] transition-colors cursor-pointer"
           >
             Case Studies
           </button>
           <button
             onClick={() => handleSelect("latest-thinking")}
-            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#ED1B36] hover:text-[#ED1B36] transition-colors"
+            className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 hover:border-[#FD6E12] hover:text-[#FD6E12] transition-colors cursor-pointer"
           >
             Latest Thinking
           </button>
@@ -139,7 +139,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {/* Services */}
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">
-              <Layers className="w-3.5 h-3.5 text-[#ED1B36]" />
+              <Layers className="w-3.5 h-3.5 text-[#FD6E12]" />
               Capabilities & Services
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -147,17 +147,17 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                 <div
                   key={service.id}
                   onClick={() => handleSelect("capabilities")}
-                  className="p-3 rounded-xl border border-zinc-100 hover:border-red-200 hover:bg-red-50/30 transition-all cursor-pointer group flex items-start justify-between"
+                  className="p-3 rounded-xl border border-zinc-100 hover:border-orange-200 hover:bg-orange-50/30 transition-all cursor-pointer group flex items-start justify-between"
                 >
                   <div>
-                    <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#ED1B36] transition-colors">
+                    <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FD6E12] transition-colors">
                       {service.title}
                     </h4>
                     <p className="text-xs text-zinc-500 line-clamp-1 mt-0.5">
                       {service.shortDesc}
                     </p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#ED1B36] group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
+                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#FD6E12] group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
                 </div>
               ))}
             </div>
@@ -166,7 +166,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {/* Industries */}
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">
-              <Building2 className="w-3.5 h-3.5 text-[#650025]" />
+              <Building2 className="w-3.5 h-3.5 text-[#01286D]" />
               Industries
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -177,14 +177,14 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   className="p-3 rounded-xl border border-zinc-100 hover:border-zinc-300 hover:bg-zinc-50 transition-all cursor-pointer group flex items-start justify-between"
                 >
                   <div>
-                    <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#ED1B36] transition-colors">
+                    <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FD6E12] transition-colors">
                       {ind.title}
                     </h4>
                     <p className="text-xs text-zinc-500 line-clamp-1 mt-0.5">
                       {ind.shortDesc}
                     </p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#ED1B36] group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
+                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#FD6E12] group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
                 </div>
               ))}
             </div>
@@ -193,7 +193,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {/* Case Studies */}
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">
-              <Briefcase className="w-3.5 h-3.5 text-[#09082F]" />
+              <Briefcase className="w-3.5 h-3.5 text-[#01286D]" />
               Success Stories & Proof
             </div>
             <div className="space-y-2">
@@ -204,14 +204,14 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   className="p-3 rounded-xl border border-zinc-100 hover:border-zinc-300 hover:bg-zinc-50 transition-all cursor-pointer group flex items-center justify-between"
                 >
                   <div>
-                    <span className="text-[10px] font-bold text-[#ED1B36] uppercase tracking-wider">
+                    <span className="text-[10px] font-bold text-[#FD6E12] uppercase tracking-wider">
                       {project.industry}
                     </span>
-                    <h4 className="text-sm font-semibold text-zinc-900 group-hover:text-[#ED1B36] transition-colors">
+                    <h4 className="text-sm font-semibold text-zinc-900 group-hover:text-[#FD6E12] transition-colors">
                       {project.title}
                     </h4>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#ED1B36] group-hover:translate-x-0.5 transition-all shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#FD6E12] group-hover:translate-x-0.5 transition-all shrink-0" />
                 </div>
               ))}
             </div>
@@ -234,11 +234,11 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                     <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
                       {insight.category} • {insight.readTime}
                     </span>
-                    <h4 className="text-sm font-semibold text-zinc-900 group-hover:text-[#ED1B36] transition-colors">
+                    <h4 className="text-sm font-semibold text-zinc-900 group-hover:text-[#FD6E12] transition-colors">
                       {insight.title}
                     </h4>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#ED1B36] group-hover:translate-x-0.5 transition-all shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-[#FD6E12] group-hover:translate-x-0.5 transition-all shrink-0" />
                 </div>
               ))}
             </div>
@@ -248,7 +248,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
         {/* Footer info */}
         <div className="px-6 py-3 bg-zinc-100 border-t border-zinc-200 text-xs text-zinc-500 flex justify-between items-center">
           <span>Press ESC to exit</span>
-          <span className="text-[#ED1B36] font-medium">AdPulse Digital Global Search</span>
+          <span className="text-[#FD6E12] font-medium">AdPulse Digital Global Search</span>
         </div>
       </div>
     </div>

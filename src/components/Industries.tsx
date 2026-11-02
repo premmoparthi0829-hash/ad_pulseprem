@@ -318,13 +318,13 @@ export const Industries: React.FC = () => {
               strokeWidth="1.4"
               fill="none"
             />
-            {/* Inner Red Board Line */}
+            {/* Inner Orange Board Line */}
             <rect
               x="15"
               y="16"
               width="34"
               height="22"
-              stroke="#ED1B36"
+              stroke="#FD6E12"
               strokeWidth="1.1"
               fill="none"
             />
@@ -552,14 +552,14 @@ export const Industries: React.FC = () => {
     >
       {/* 
         ======================================================================
-        01. Top Deep Burgundy Accent Bar (Exact match to screenshot top edge)
+        01. Top Primary Blue Accent Bar (Exact match to screenshot top edge)
         ======================================================================
       */}
-      <div className="w-full h-2 bg-[#650025] absolute top-0 left-0 right-0 z-20" />
+      <div className="w-full h-2 bg-[#01286D] absolute top-0 left-0 right-0 z-20" />
 
       {/* 
         ======================================================================
-        02. Shared SVG Defs for Signature Red Diagonal Hatching Pattern
+        02. Shared SVG Defs for Signature Orange Diagonal Hatching Pattern
         ======================================================================
       */}
       <svg className="absolute w-0 h-0" aria-hidden="true">
@@ -576,7 +576,7 @@ export const Industries: React.FC = () => {
               y1="0"
               x2="0"
               y2="5"
-              stroke="#ED1B36"
+              stroke="#FD6E12"
               strokeWidth="1.3"
             />
           </pattern>
@@ -598,14 +598,14 @@ export const Industries: React.FC = () => {
 
       {/* 
         ======================================================================
-        04. Subtle Vertical Red/Burgundy Drop Accent Lines Below Cards
+        04. Subtle Vertical Blue Drop Accent Lines Below Cards
         ======================================================================
       */}
       <div
         className="absolute bottom-0 left-0 right-0 h-36 pointer-events-none opacity-25"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(to right, transparent 0px, transparent 110px, rgba(101, 0, 37, 0.45) 110px, rgba(101, 0, 37, 0.45) 1px, transparent 111px, transparent 220px)",
+            "repeating-linear-gradient(to right, transparent 0px, transparent 110px, rgba(1, 40, 109, 0.45) 110px, rgba(1, 40, 109, 0.45) 1px, transparent 111px, transparent 220px)",
         }}
       />
 
@@ -617,11 +617,11 @@ export const Industries: React.FC = () => {
         */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div className="max-w-2xl space-y-2">
-            <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#242321] tracking-tight leading-tight">
+            <h2 className="text-4xl sm:text-5xl font-black font-heading text-[#01286D] tracking-tight leading-tight">
               Expertise Across Industries
             </h2>
             <p className="text-[13px] sm:text-[14px] text-zinc-700 font-normal leading-relaxed max-w-xl">
-              Our expertise spans 14 industries, including banking, insurance, telecommunications, media, entertainment, distribution, and retail.
+              Our digital marketing expertise spans 14 industries, driving bespoke performance campaigns, SEO dominance, and high-converting customer acquisition at global scale.
             </p>
           </div>
 
@@ -630,14 +630,14 @@ export const Industries: React.FC = () => {
             <button
               onClick={prevSlide}
               aria-label="Previous industries"
-              className="w-13 h-8.5 rounded-full bg-[#242321] hover:bg-[#ED1B36] text-white flex items-center justify-center transition-colors duration-200 cursor-pointer"
+              className="w-13 h-8.5 rounded-full bg-[#01286D] hover:bg-[#FD6E12] text-white flex items-center justify-center transition-colors duration-200 cursor-pointer shadow-sm"
             >
               <ArrowLeft className="w-4 h-4" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next industries"
-              className="w-13 h-8.5 rounded-full bg-[#242321] hover:bg-[#ED1B36] text-white flex items-center justify-center transition-colors duration-200 cursor-pointer"
+              className="w-13 h-8.5 rounded-full bg-[#01286D] hover:bg-[#FD6E12] text-white flex items-center justify-center transition-colors duration-200 cursor-pointer shadow-sm"
             >
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -680,11 +680,11 @@ export const Industries: React.FC = () => {
                   onClick={() => router.push(`/industries/${ind.slug}`)}
                   className={`w-[235px] shrink-0 mr-6 bg-white rounded-none border border-[#E2DDD5] shadow-xs transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden cursor-pointer h-[310px] sm:h-[320px] select-none ${
                     isActive
-                      ? "shadow-xl border-zinc-400 ring-1 ring-[#ED1B36]/30 -translate-y-1.5"
+                      ? "shadow-xl border-zinc-400 ring-1 ring-[#FD6E12]/30 -translate-y-1.5"
                       : "hover:shadow-md hover:-translate-y-0.5"
                   }`}
                 >
-                  {/* Top: Minimalist Line-Art Icon with Red Hatching */}
+                  {/* Top: Minimalist Line-Art Icon with Orange Hatching */}
                   <div className="pt-1 flex items-start">
                     <div className="w-16 h-16 flex items-center justify-center">
                       {renderIcon(ind.iconType)}
@@ -693,7 +693,7 @@ export const Industries: React.FC = () => {
 
                   {/* Middle: Industry Title in Bold Clean Uppercase */}
                   <div className="relative z-10 py-1">
-                    <h3 className="text-[12px] sm:text-[13px] font-black font-heading text-[#242321] tracking-tight uppercase leading-snug whitespace-pre-line">
+                    <h3 className="text-[12px] sm:text-[13px] font-black font-heading text-[#01286D] tracking-tight uppercase leading-snug whitespace-pre-line">
                       {ind.title}
                     </h3>
                   </div>
@@ -706,7 +706,7 @@ export const Industries: React.FC = () => {
                           e.stopPropagation();
                           router.push(`/industries/${ind.slug}`);
                         }}
-                        className="px-5 py-2 rounded-full bg-[#ED1B36] hover:bg-[#C8102E] text-white text-[12px] font-bold uppercase tracking-wider flex items-center gap-2 shadow-sm transition-all duration-200"
+                        className="px-5 py-2 rounded-full bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-[12px] font-bold uppercase tracking-wider flex items-center gap-2 shadow-sm transition-all duration-200"
                       >
                         <span>Know More</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -717,21 +717,21 @@ export const Industries: React.FC = () => {
                           e.stopPropagation();
                           router.push(`/industries/${ind.slug}`);
                         }}
-                        className="w-7 h-7 rounded-full bg-[#ED1B36] hover:bg-[#C8102E] text-white flex items-center justify-center shadow-xs transition-transform duration-200 hover:scale-110"
+                        className="w-7 h-7 rounded-full bg-[#FD6E12] hover:bg-[#e05e0c] text-white flex items-center justify-center shadow-xs transition-transform duration-200 hover:scale-110"
                       >
                         <ArrowRight className="w-3.5 h-3.5" />
                       </div>
                     )}
                   </div>
 
-                  {/* Subtle Red Diagonal Striped Pattern on Bottom */}
+                  {/* Subtle Orange Diagonal Striped Pattern on Bottom */}
                   <div
                     className={`absolute bottom-0 right-0 pointer-events-none transition-all duration-300 ${
                       isActive ? "w-44 h-32 opacity-75" : "w-28 h-20 opacity-55"
                     }`}
                     style={{
                       background:
-                        "repeating-linear-gradient(-30deg, rgba(237, 27, 54, 0.45), rgba(237, 27, 54, 0.45) 1px, transparent 1px, transparent 6px)",
+                        "repeating-linear-gradient(-30deg, rgba(253, 110, 18, 0.45), rgba(253, 110, 18, 0.45) 1px, transparent 1px, transparent 6px)",
                       clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
                     }}
                   />

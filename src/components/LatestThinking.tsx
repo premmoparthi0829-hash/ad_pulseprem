@@ -19,33 +19,33 @@ const column1Items: ThinkingItem[] = [
   {
     id: "ai-adoption",
     type: "BLOG",
-    category: "ARTIFICIAL INTELLIGENCE",
-    title: "From AI Adoption to AI Advantage",
+    category: "PERFORMANCE MARKETING",
+    title: "From CPC to LTV: AI-Driven Performance Media Optimization",
     description:
-      "Read our leadership take on what AI makes newly possible for enterprises focused on exponential growth, operational autonomy, and compounding competitive edge.",
+      "Read our leadership take on how predictive machine learning models are transforming algorithmic ad bidding and unlocking 4.8x enterprise ROAS.",
     image: "/images/latest-thinking/ai-adoption.jpg",
     readTime: "5 min read",
     date: "October 2026",
     fullContent: [
-      "Enterprise AI adoption has reached an inflection point. While initial deployments focused on localized task automation, the next frontier belongs to organizations that weave autonomous intelligence across their entire operational fabric.",
-      "By transitioning from tactical GenAI experimentation to systemic architectural advantage, market leaders are realizing 3.8x higher ROI and compressing execution cycles from weeks to minutes.",
-      "AdPulse Digital partners with Fortune 500 enterprises to engineer proprietary domain-tuned foundational models, agentic workflows, and zero-latency inference meshes."
+      "Modern digital advertising has moved far beyond manual keyword bidding and static demographics. Leading enterprise brands leverage predictive customer lifetime value (pLTV) models to bid aggressively on high-value cohorts while cutting budget on low-margin clicks.",
+      "By feeding first-party CRM telemetry directly into server-side Meta and Google ad APIs, organizations are realizing 45% lower cost per acquisition and compounding conversion rates across paid search and paid social.",
+      "AdPulse Digital partners with enterprise marketing teams to construct automated multi-touch bidding engines, custom attribution models, and dynamic ad creative pipelines."
     ],
   },
   {
     id: "invisible-ai",
     type: "BLOG",
-    category: "ARTIFICIAL INTELLIGENCE",
-    title: "Invisible AI: Enabling Frictionless Customer Experiences in Europe",
+    category: "SEARCH ENGINE OPTIMIZATION",
+    title: "Generative Engine Optimization (GEO): Winning Search Beyond Blue Links",
     description:
-      "Discover how invisible ambient AI reduces cognitive friction and makes customer journeys feel completely effortless across omni-channel touchpoints.",
+      "Discover how leading brands dominate answers on ChatGPT, Perplexity, and Google AI Overviews through semantic technical SEO authority.",
     image: "/images/latest-thinking/invisible-ai.jpg",
     readTime: "4 min read",
     date: "September 2026",
     fullContent: [
-      "The best interface is no interface at all. Ambient intelligence running silently in the background anticipates customer intent, resolves complex inquiries before escalation, and tailors interactions in real time.",
-      "European consumer expectations demand strict GDPR compliance paired with hyper-personalized digital service. Invisible AI bridges this gap through local edge compute and privacy-preserving federated models.",
-      "Discover how AdPulse Digital’s predictive CX engines empower leading telecom and retail brands to slash churn by 28% while boosting customer lifetime value."
+      "The next era of search is zero-click conversational discovery. Winning visibility requires restructuring your content architecture to be authoritative, easily cited, and semantically dense for generative AI search engines.",
+      "By integrating comprehensive technical schema markup, original research citations, and high-relevance topic clusters, brands establish verified domain authority.",
+      "Discover how AdPulse Digital’s GEO framework helps brands capture top citation positions across generative AI models while maintaining #1 organic Google rankings."
     ],
   },
 ];
@@ -54,49 +54,49 @@ const column2Items: ThinkingItem[] = [
   {
     id: "open-banking",
     type: "BLOG",
-    category: "BANKING AND FINANCIAL SERVICES",
-    title: "Open Banking at an Inflection Point: Why Banks Must Act Now",
+    category: "GROWTH MARKETING",
+    title: "Full-Funnel Omnichannel: Why Multi-Touch Attribution Outperforms Siloed Ads",
     description:
-      "Navigate how open banking is reshaping compliance, customer trust, and competitive edge for banks in a hyper-connected API ecosystem.",
+      "Navigate how unifying paid social, organic search, creator content, and lifecycle email into a coherent funnel multiplies enterprise conversion.",
     image: "/images/latest-thinking/open-banking.jpg",
     readTime: "6 min read",
     date: "October 2026",
     fullContent: [
-      "Regulatory frameworks like PSD3 and open finance mandates are transforming banks from traditional monolithic repositories into agile API-first financial platforms.",
-      "Institutions that view open banking solely as a compliance hurdle risk disintermediation by agile fintechs. Forward-looking banks are turning regulatory compliance into a monetizable platform business model.",
-      "Explore AdPulse Digital’s secure API orchestration engines and microservices modernization frameworks tailored for Tier-1 banking institutions."
+      "Customers rarely convert on their first touchpoint. Isolating marketing channels into disconnected departmental silos leads to budget cannibalization and inaccurate ROAS calculations.",
+      "When programmatic brand awareness, retargeting funnels, and automated nurture sequences operate from a unified customer data platform, conversion velocity increases dramatically.",
+      "Explore AdPulse Digital’s holistic growth marketing frameworks designed to turn fragmented marketing spend into a predictable revenue generator."
     ],
   },
   {
     id: "security-by-design",
     type: "WHITEPAPER",
-    category: "CYBER SECURITY",
-    title: "Security by Design: A GenAI Model for Trust and Growth",
+    category: "FIRST-PARTY DATA",
+    title: "Server-Side Tracking & Privacy-First Measurement: The CMO Playbook",
     description:
-      "Secure GenAI from the start to improve reliability, meet evolving regulatory standards, and protect critical enterprise stakeholder trust.",
+      "Master server-side conversion APIs (CAPI), cookieless tracking, and zero-party data acquisition to future-proof your digital marketing metrics.",
     image: "/images/latest-thinking/security-design.jpg",
     readTime: "8 min read",
     date: "August 2026",
     fullContent: [
-      "As generative AI and autonomous agents take on mission-critical responsibilities, traditional perimeter-based security is no longer sufficient to mitigate prompt injection, data exfiltration, and model poisoning.",
-      "A proactive Security-by-Design posture embeds guardrails, cryptographic provenance verification, and real-time behavioral anomaly detection at every layer of the LLM pipeline.",
-      "Download our whitepaper to review AdPulse Digital's Zero-Trust Cyber Resilience benchmark for multi-agent enterprise deployments."
+      "Browser cookie restrictions and privacy regulations have blinded traditional client-side marketing analytics. Brands relying solely on browser pixels miss up to 35% of true conversion events.",
+      "Implementing server-side tracking (Meta CAPI, Google Enhanced Conversions) restores accurate attribution, improves algorithmic ad delivery, and respects customer privacy standards.",
+      "Download our whitepaper to review AdPulse Digital's Server-Side Marketing Architecture benchmark for enterprise growth leaders."
     ],
   },
   {
     id: "bold-prepaid",
     type: "WHITEPAPER",
-    category: "COMMUNICATIONS",
-    title: "Bold Moves in Prepaid: A New Growth Path for Developed Markets",
+    category: "SOCIAL & CREATOR STRATEGY",
+    title: "Viral Creator Campaigns: Scaling Customer Acquisition with Authentic Storytelling",
     description:
-      "Discover how telcos are reinventing prepaid with AI-driven churn prediction, digital journeys, and flexible new value models.",
+      "Discover how enterprise brands are replacing synthetic corporate ads with creator-led content that drives 3.4x higher organic engagement.",
     image: "/images/latest-thinking/bold-prepaid.jpg",
     readTime: "7 min read",
     date: "July 2026",
     fullContent: [
-      "In saturated mobile markets, prepaid subscribers represent an untapped growth reservoir when treated with the sophistication of post-paid digital journeys.",
-      "By leveraging real-time usage analytics and zero-touch eSIM provisioning, telecom operators are unlocking high-margin digital lifestyle services and micro-subscriptions.",
-      "Learn how AdPulse Digital’s telecommunications vertical delivers cloud-native BSS/OSS stacks that empower telcos to capture next-generation digital natives."
+      "Audiences have developed immunity to overly polished corporate commercials. Modern consumers seek authenticity, relatable human product demos, and community consensus.",
+      "By pairing high-volume UGC (user-generated content) and micro-creator partnerships with paid whitelisting and spark ads, brands achieve unprecedented viral reach with lower production costs.",
+      "Learn how AdPulse Digital’s creator studio scales end-to-end influencer campaigns that turn social attention into direct checkout revenue."
     ],
   },
 ];
@@ -205,7 +205,7 @@ const ThinkingCard: React.FC<ThinkingCardProps> = ({ item, heightClass, onSelect
             {item.description}
           </p>
 
-          <div className="mt-3 flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-red-400 transition-colors uppercase tracking-wider">
+          <div className="mt-3 flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD6E12] transition-colors uppercase tracking-wider">
             <span>Read More</span>
             <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
           </div>
@@ -227,7 +227,7 @@ export const LatestThinking: React.FC = () => {
           ======================================================================
         */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12 sm:mb-14">
-          <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-black font-heading tracking-tight text-[#242321]">
+          <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-black font-heading tracking-tight text-[#01286D]">
             Latest Thinking
           </h2>
 
@@ -331,7 +331,7 @@ export const LatestThinking: React.FC = () => {
 
               {/* Badges on image */}
               <div className="absolute bottom-4 left-6 z-10 flex items-center gap-2">
-                <span className="px-3 py-1 bg-[#650025] text-white text-[11px] font-bold uppercase tracking-wider">
+                <span className="px-3 py-1 bg-[#01286D] text-white text-[11px] font-bold uppercase tracking-wider">
                   {selectedItem.type}
                 </span>
                 <span className="px-3 py-1 bg-black/60 backdrop-blur-sm border border-white/20 text-white text-[11px] font-bold uppercase tracking-wider">
@@ -350,14 +350,14 @@ export const LatestThinking: React.FC = () => {
                 <span>•</span>
                 <span>{selectedItem.date}</span>
                 <span>•</span>
-                <span className="text-[#ED1B36] font-bold">AdPulse Insights</span>
+                <span className="text-[#FD6E12] font-bold">AdPulse Insights</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-[#242321] leading-snug">
+              <h2 className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-[#01286D] leading-snug">
                 {selectedItem.title}
               </h2>
 
-              <p className="text-base sm:text-lg font-medium text-zinc-700 leading-relaxed italic border-l-4 border-[#ED1B36] pl-4">
+              <p className="text-base sm:text-lg font-medium text-zinc-700 leading-relaxed italic border-l-4 border-[#FD6E12] pl-4">
                 &ldquo;{selectedItem.description}&rdquo;
               </p>
 
@@ -376,7 +376,7 @@ export const LatestThinking: React.FC = () => {
                 </span>
                 <button
                   onClick={() => setSelectedItem(null)}
-                  className="px-6 py-2.5 bg-[#650025] hover:bg-[#850031] text-white text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
+                  className="px-6 py-2.5 bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
                 >
                   Close Insight
                 </button>

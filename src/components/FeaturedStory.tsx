@@ -12,12 +12,12 @@ interface SpeakerInfo {
 const speakers: [SpeakerInfo, SpeakerInfo] = [
   {
     name: "DR. RAJESH SHARMA",
-    roleLine1: "Group Chief Strategy and",
-    roleLine2: "Transformation Officer, Axiata Group",
+    roleLine1: "Group Chief Marketing &",
+    roleLine2: "Brand Strategy Officer",
   },
   {
     name: "AMOL PHADKE",
-    roleLine1: "Chief Transformation Officer,",
+    roleLine1: "Chief Growth & Performance Officer,",
     roleLine2: "AdPulse Digital",
   },
 ];
@@ -63,28 +63,28 @@ export const FeaturedStory: React.FC = () => {
               <path
                 d="M70,0 L140,40 L140,120 L70,160 L0,120 L0,40 Z"
                 fill="none"
-                stroke="#ED1B36"
+                stroke="#FD6E12"
                 strokeWidth="0.85"
                 strokeOpacity="0.45"
               />
               <path
                 d="M70,80 L70,160 M70,80 L140,40 M70,80 L0,40"
                 fill="none"
-                stroke="#650025"
+                stroke="#01286D"
                 strokeWidth="0.85"
                 strokeOpacity="0.35"
               />
               <path
                 d="M70,242 L140,202 L140,122 L70,82 L0,122 L0,202 Z"
                 fill="none"
-                stroke="#ED1B36"
+                stroke="#FD6E12"
                 strokeWidth="0.85"
                 strokeOpacity="0.45"
               />
               <path
                 d="M70,162 L70,242 M70,162 L140,202 M70,162 L0,202"
                 fill="none"
-                stroke="#650025"
+                stroke="#01286D"
                 strokeWidth="0.85"
                 strokeOpacity="0.35"
               />
@@ -94,9 +94,9 @@ export const FeaturedStory: React.FC = () => {
         </svg>
       </div>
 
-      {/* Signature Angular Burgundy Slash across right side */}
+      {/* Signature Angular Dark Blue Slash across right side */}
       <div
-        className="absolute top-0 right-0 w-[55%] lg:w-[48%] h-full bg-gradient-to-br from-[#680026] via-[#52001E] to-[#380014] pointer-events-none z-0"
+        className="absolute top-0 right-0 w-[55%] lg:w-[48%] h-full bg-gradient-to-br from-[#01286D] via-[#011F54] to-[#00143D] pointer-events-none z-0"
         style={{
           clipPath: "polygon(28% 0%, 100% 0%, 100% 100%, 0% 100%)",
         }}
@@ -109,7 +109,7 @@ export const FeaturedStory: React.FC = () => {
             (h, i) => (
               <span
                 key={i}
-                className="w-[2.5px] bg-[#ED1B36] rounded-full inline-block animate-pulse"
+                className="w-[2.5px] bg-[#FD6E12] rounded-full inline-block animate-pulse"
                 style={{
                   height: `${h * 0.65}px`,
                   animationDuration: `${1.2 + (i % 5) * 0.25}s`,
@@ -138,7 +138,7 @@ export const FeaturedStory: React.FC = () => {
               <span className="text-[10px] sm:text-[11px] font-extrabold tracking-[0.24em] text-zinc-300 uppercase block">
                 SIGNAL OVER NOISE
               </span>
-              <span className="text-4xl sm:text-5xl lg:text-[52px] font-black font-heading text-[#ED1B36] tracking-tight leading-none block">
+              <span className="text-4xl sm:text-5xl lg:text-[52px] font-black font-heading text-[#FD6E12] tracking-tight leading-none block">
                 S/N
               </span>
             </div>
@@ -151,20 +151,20 @@ export const FeaturedStory: React.FC = () => {
               </div>
             </div>
 
-            {/* Editorial Headline with Signature Red 'Beats' Highlight */}
+            {/* Editorial Headline with Signature Orange 'Beats' Highlight */}
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-black font-heading tracking-tight text-white leading-[1.12]">
-              Sovereign AI: Why <br className="hidden sm:inline" />
-              Collaboration <br className="hidden sm:inline" />
-              <span className="text-[#ED1B36]">Beats</span> Control
+              AI in Marketing: Why <br className="hidden sm:inline" />
+              Creative Performance <br className="hidden sm:inline" />
+              <span className="text-[#FD6E12]">Beats</span> Automation
             </h2>
 
-            {/* Red Rectangular CTA Button */}
+            {/* Orange Rectangular CTA Button */}
             <div className="pt-1">
               <button
                 onClick={() => setVideoModalOpen(true)}
-                className="px-6 sm:px-7 py-3 bg-[#ED1B36] hover:bg-[#C8102E] text-white text-xs font-extrabold uppercase tracking-widest flex items-center gap-2.5 transition-all duration-200 shadow-xl shadow-red-900/40 hover:scale-[1.02] cursor-pointer"
+                className="px-6 sm:px-7 py-3 bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs font-extrabold uppercase tracking-widest flex items-center gap-2.5 transition-all duration-200 shadow-xl shadow-orange-950/40 hover:scale-[1.02] cursor-pointer"
               >
-                <span className="w-5 h-5 rounded-full bg-white text-[#ED1B36] flex items-center justify-center shrink-0">
+                <span className="w-5 h-5 rounded-full bg-white text-[#FD6E12] flex items-center justify-center shrink-0">
                   <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
                 </span>
                 <span>WATCH FULL EPISODE</span>
@@ -206,16 +206,16 @@ export const FeaturedStory: React.FC = () => {
                         "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)",
                     }}
                   >
-                    {/* Red diagonal accent notch on left edge */}
+                    {/* Orange diagonal accent notch on left edge */}
                     <div
-                      className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#ED1B36]"
+                      className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#FD6E12]"
                       style={{
                         clipPath:
                           "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)",
                       }}
                     />
                     <div className="pl-2 sm:pl-2.5">
-                      <h4 className="text-[10.5px] sm:text-[12px] md:text-[13px] font-black font-heading tracking-tight uppercase text-[#650025] leading-tight truncate">
+                      <h4 className="text-[10.5px] sm:text-[12px] md:text-[13px] font-black font-heading tracking-tight uppercase text-[#01286D] leading-tight truncate">
                         {speakers[0].name}
                       </h4>
                       <p className="text-[8.5px] sm:text-[9.5px] md:text-[10px] font-medium text-zinc-700 leading-tight mt-0.5 truncate">
@@ -235,16 +235,16 @@ export const FeaturedStory: React.FC = () => {
                         "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)",
                     }}
                   >
-                    {/* Red diagonal accent notch on left edge */}
+                    {/* Orange diagonal accent notch on left edge */}
                     <div
-                      className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#ED1B36]"
+                      className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#FD6E12]"
                       style={{
                         clipPath:
                           "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)",
                       }}
                     />
                     <div className="pl-2 sm:pl-2.5">
-                      <h4 className="text-[10.5px] sm:text-[12px] md:text-[13px] font-black font-heading tracking-tight uppercase text-[#650025] leading-tight truncate">
+                      <h4 className="text-[10.5px] sm:text-[12px] md:text-[13px] font-black font-heading tracking-tight uppercase text-[#01286D] leading-tight truncate">
                         {speakers[1].name}
                       </h4>
                       <p className="text-[8.5px] sm:text-[9.5px] md:text-[10px] font-medium text-zinc-700 leading-tight mt-0.5 truncate">
@@ -273,7 +273,7 @@ export const FeaturedStory: React.FC = () => {
             {/* Modal Header */}
             <div className="px-6 py-4 bg-black/60 border-b border-zinc-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#ED1B36] flex items-center justify-center text-white">
+                <div className="w-8 h-8 rounded-full bg-[#FD6E12] flex items-center justify-center text-white">
                   <Radio className="w-4 h-4 animate-pulse" />
                 </div>
                 <div>
@@ -323,7 +323,7 @@ export const FeaturedStory: React.FC = () => {
               {/* Central Play/Pause Action */}
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#ED1B36] hover:bg-[#C8102E] text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110 cursor-pointer"
+                className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FD6E12] hover:bg-[#e05e0c] text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110 cursor-pointer"
               >
                 {isPlaying ? (
                   <Play className="w-7 h-7 fill-current ml-1" />
@@ -334,7 +334,7 @@ export const FeaturedStory: React.FC = () => {
 
               {/* Live Status Tag */}
               <div className="absolute bottom-4 left-6 z-10 flex items-center gap-2 text-xs font-bold bg-black/70 px-3.5 py-1.5 rounded-full border border-white/10">
-                <span className="w-2 h-2 rounded-full bg-[#ED1B36] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#FD6E12] animate-pulse" />
                 <span>Now Streaming: Keynote Discussion (34:20)</span>
               </div>
             </div>
@@ -343,7 +343,7 @@ export const FeaturedStory: React.FC = () => {
             <div className="p-6 bg-[#0B091C] border-t border-zinc-800/80 space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-3.5 bg-white/5 border border-white/10 rounded-lg">
-                  <span className="text-[#ED1B36] text-xs font-black uppercase tracking-tight block">
+                  <span className="text-[#FD6E12] text-xs font-black uppercase tracking-tight block">
                     {speakers[0].name}
                   </span>
                   <span className="text-[11px] text-zinc-400 block mt-0.5 leading-tight">
@@ -351,7 +351,7 @@ export const FeaturedStory: React.FC = () => {
                   </span>
                 </div>
                 <div className="p-3.5 bg-white/5 border border-white/10 rounded-lg">
-                  <span className="text-[#ED1B36] text-xs font-black uppercase tracking-tight block">
+                  <span className="text-[#FD6E12] text-xs font-black uppercase tracking-tight block">
                     {speakers[1].name}
                   </span>
                   <span className="text-[11px] text-zinc-400 block mt-0.5 leading-tight">
@@ -363,7 +363,7 @@ export const FeaturedStory: React.FC = () => {
               {/* Progress Scrubber */}
               <div className="space-y-2 pt-2">
                 <div className="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-[#ED1B36] h-full w-2/5 animate-pulse" />
+                  <div className="bg-[#FD6E12] h-full w-2/5 animate-pulse" />
                 </div>
                 <div className="flex items-center justify-between text-[11px] font-mono text-zinc-500">
                   <span>14:32</span>

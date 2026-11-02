@@ -1,40 +1,26 @@
 import type { Metadata } from "next";
-import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "AdPulse Digital | Powering Digital. Accelerating Growth.",
+  title: "AdPulse Digital | AI-Powered Digital Marketing & Growth Agency",
   description:
-    "AdPulse Digital is a premier IT software, digital transformation, and growth marketing company helping enterprise brands scale at speed through intelligent technology and creative performance.",
+    "AdPulse Digital is a premier performance marketing, SEO, paid media, and digital growth agency helping enterprise brands and ambitious companies scale at speed through data-driven campaigns and magnetic creative.",
   keywords: [
-    "IT Software Company",
-    "Digital Marketing",
-    "Enterprise Digital Transformation",
-    "SEO",
+    "Digital Marketing Agency",
     "Performance Marketing",
-    "Web Application Development",
+    "SEO & Generative Engine Optimization",
+    "Paid Advertising & ROAS Optimization",
+    "Social Media Marketing",
+    "Conversion Rate Optimization",
     "AI Marketing Automation",
+    "Content Marketing & Copywriting",
     "AdPulse Digital",
   ],
   authors: [{ name: "AdPulse Digital" }],
   openGraph: {
-    title: "AdPulse Digital | Powering Digital. Accelerating Growth.",
+    title: "AdPulse Digital | AI-Powered Digital Marketing & Growth Agency",
     description:
-      "Enterprise digital transformation, technology consulting, and high-impact digital marketing solutions.",
+      "Enterprise digital marketing, SEO dominance, paid media, and high-impact full-funnel growth solutions.",
     type: "website",
     locale: "en_US",
     siteName: "AdPulse Digital",
@@ -49,9 +35,25 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${inter.variable} scroll-smooth`}
+      suppressHydrationWarning
+      className="scroll-smooth"
     >
-      <body className="font-sans antialiased text-[#242321] bg-white selection:bg-[#ED1B36] selection:text-white min-h-screen flex flex-col">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body
+        suppressHydrationWarning
+        className="font-sans antialiased text-[#242321] bg-white selection:bg-[#FD6E12] selection:text-white min-h-screen flex flex-col"
+      >
         {children}
       </body>
     </html>

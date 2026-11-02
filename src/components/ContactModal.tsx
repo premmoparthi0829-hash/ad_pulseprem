@@ -94,11 +94,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header banner */}
-        <div className="bg-[#09082F] px-8 py-6 text-white flex items-center justify-between relative overflow-hidden">
-          {/* Subtle red accent line */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#ED1B36] via-[#650025] to-[#ED1B36]" />
+        <div className="bg-[#01286D] px-8 py-6 text-white flex items-center justify-between relative overflow-hidden">
+          {/* Subtle orange accent line */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FD6E12] via-orange-400 to-[#FD6E12]" />
           <div>
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#ED1B36]">
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#FD6E12]">
               INITIATE COLLABORATION
             </span>
             <h3 className="text-xl sm:text-2xl font-bold font-heading mt-0.5">
@@ -107,7 +107,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-white/10 text-zinc-300 hover:text-white transition-colors"
+            className="p-2 rounded-full hover:bg-white/10 text-zinc-300 hover:text-white transition-colors cursor-pointer"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -121,20 +121,20 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-9 h-9" />
               </div>
-              <h4 className="text-2xl font-bold text-zinc-900 font-heading">
+              <h4 className="text-2xl font-bold text-[#01286D] font-heading">
                 Inquiry Successfully Logged
               </h4>
               <p className="text-sm text-zinc-600 max-w-md mx-auto">
                 {successInfo.message}
               </p>
               <div className="inline-block px-4 py-2 bg-zinc-100 rounded-lg border border-zinc-200 text-xs font-mono text-zinc-800">
-                Tracking ID: <span className="font-bold text-[#ED1B36]">{successInfo.referenceId}</span>
+                Tracking ID: <span className="font-bold text-[#FD6E12]">{successInfo.referenceId}</span>
               </div>
               <div className="pt-4">
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="px-6 py-2.5 rounded-lg bg-[#ED1B36] text-white font-bold text-sm hover:bg-[#c9122a] transition-all shadow-md"
+                  className="px-6 py-2.5 rounded-lg bg-[#FD6E12] text-white font-bold text-sm hover:bg-[#e05e0c] transition-all shadow-md cursor-pointer"
                 >
                   Return to Website
                 </button>
@@ -152,7 +152,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
-                    Full Name <span className="text-[#ED1B36]">*</span>
+                    Full Name <span className="text-[#FD6E12]">*</span>
                   </label>
                   <input
                     type="text"
@@ -161,12 +161,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     placeholder="e.g. David Sterling"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#ED1B36] focus:ring-1 focus:ring-[#ED1B36]"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#FD6E12] focus:ring-1 focus:ring-[#FD6E12]"
                   />
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
-                    Corporate Email <span className="text-[#ED1B36]">*</span>
+                    Corporate Email <span className="text-[#FD6E12]">*</span>
                   </label>
                   <input
                     type="email"
@@ -175,7 +175,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     placeholder="david@enterprise.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#ED1B36] focus:ring-1 focus:ring-[#ED1B36]"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#FD6E12] focus:ring-1 focus:ring-[#FD6E12]"
                   />
                 </div>
               </div>
@@ -183,7 +183,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
-                    Organization / Company <span className="text-[#ED1B36]">*</span>
+                    Organization / Company <span className="text-[#FD6E12]">*</span>
                   </label>
                   <input
                     type="text"
@@ -192,7 +192,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     placeholder="e.g. Apex Global Corp"
                     value={formData.companyName}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#ED1B36] focus:ring-1 focus:ring-[#ED1B36]"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#FD6E12] focus:ring-1 focus:ring-[#FD6E12]"
                   />
                 </div>
                 <div>
@@ -205,20 +205,20 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     placeholder="+1 (555) 000-0000"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#ED1B36] focus:ring-1 focus:ring-[#ED1B36]"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#FD6E12] focus:ring-1 focus:ring-[#FD6E12]"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
-                  Primary Capability Required <span className="text-[#ED1B36]">*</span>
+                  Primary Capability Required <span className="text-[#FD6E12]">*</span>
                 </label>
                 <select
                   name="serviceRequired"
                   value={formData.serviceRequired}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#ED1B36] focus:ring-1 focus:ring-[#ED1B36] bg-white"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#FD6E12] focus:ring-1 focus:ring-[#FD6E12] bg-white"
                 >
                   {servicesData.map((s) => (
                     <option key={s.id} value={s.title}>
@@ -233,7 +233,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-1.5">
-                  Project Scope & Objectives <span className="text-[#ED1B36]">*</span>
+                  Project Scope & Objectives <span className="text-[#FD6E12]">*</span>
                 </label>
                 <textarea
                   name="projectDetails"
@@ -242,7 +242,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   placeholder="Outline your timeline, current technical challenges, or growth goals..."
                   value={formData.projectDetails}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#ED1B36] focus:ring-1 focus:ring-[#ED1B36] resize-none"
+                  className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 focus:outline-none focus:border-[#FD6E12] focus:ring-1 focus:ring-[#FD6E12] resize-none"
                 />
               </div>
 
@@ -253,7 +253,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-3 rounded-lg bg-[#ED1B36] hover:bg-[#c9122a] text-white font-bold text-sm tracking-wider uppercase flex items-center gap-2 transition-all shadow-md disabled:opacity-60"
+                  className="px-6 py-3 rounded-lg bg-[#FD6E12] hover:bg-[#e05e0c] text-white font-bold text-sm tracking-wider uppercase flex items-center gap-2 transition-all shadow-md disabled:opacity-60 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <>

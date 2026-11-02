@@ -81,10 +81,10 @@ export const Careers: React.FC<CareersProps> = ({ onOpenCareers }) => {
                 if (onOpenCareers) {
                   onOpenCareers();
                 } else {
-                  window.location.href = "/contact-us";
+                  window.location.href = "/careers";
                 }
               }}
-              className="px-7 py-3 sm:px-8 sm:py-3.5 bg-white hover:bg-[#ED1B36] text-black hover:text-white text-xs font-bold uppercase tracking-widest font-heading transition-all duration-200 shadow-md cursor-pointer rounded-none inline-block select-none"
+              className="px-7 py-3 sm:px-8 sm:py-3.5 bg-white hover:bg-[#FD6E12] text-black hover:text-white text-xs font-bold uppercase tracking-widest font-heading transition-all duration-200 shadow-md cursor-pointer rounded-none inline-block select-none"
             >
               KNOW MORE
             </button>

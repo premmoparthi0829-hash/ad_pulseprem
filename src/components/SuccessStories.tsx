@@ -30,72 +30,72 @@ export const SuccessStories: React.FC = () => {
       badge: "VIDEO",
       type: "video",
       headline:
-        "How a trusted partnership helped Hanab navigate an IT carve-out and build a scalable foundation for growth",
+        "How an integrated digital marketing strategy helped Hanab scale global customer acquisition by 185%",
       authorName: "Rajesh Varma",
-      authorRole: "IT Director, Hanab Group",
+      authorRole: "Chief Marketing Officer, Hanab Group",
       image: "/images/success-stories/story-card-1-rajesh-hd.jpg",
       quote:
-        "AdPulse Digital provided the technical agility and strategic leadership necessary to execute our global carve-out without a single minute of operational downtime.",
+        "AdPulse Digital transformed our brand into an omnichannel revenue engine with data-driven paid advertising, technical SEO, and high-converting creative.",
       metrics: [
-        { label: "Carve-out Velocity", value: "45% Faster" },
-        { label: "Core Availability", value: "99.99%" },
-        { label: "Cost Optimization", value: "32% OpEx Saved" },
+        { label: "Customer Acquisition Velocity", value: "+185%" },
+        { label: "Blended Enterprise ROAS", value: "4.8x" },
+        { label: "CAC Reduction", value: "-38%" },
       ],
       summary:
-        "When Hanab initiated an enterprise-wide IT divestiture, AdPulse Digital orchestrated cross-functional squads to decouple legacy ERP and cloud infrastructures, establishing an autonomous, secure digital foundation tailored for rapid organic expansion.",
+        "When Hanab sought to dominate competitive international markets, AdPulse Digital orchestrated full-funnel digital marketing campaigns, deploying hyper-targeted paid media, SEO content clusters, and high-converting landing pages to accelerate qualified customer acquisition.",
     },
     {
       id: "story-2",
       badge: "CASE STUDY",
       type: "split-burgundy",
-      headline: "Outpacing Change with Velocity 2.0",
+      headline: "Outpacing Change with Velocity 2.0: Dynamic Creative Optimization",
       burgundyTitle: "Outpacing Change with Velocity 2.0",
       image: "/images/success-stories/story-card-2-racecar-hd.jpg",
       quote:
-        "Leveraging high-frequency telemetry streaming and predictive AI, our racing hypercars compute optimal regenerative braking strategies within milliseconds on the circuit.",
+        "Leveraging algorithmic creative testing and predictive analytics, our performance ad campaigns dynamically personalized messaging across millions of high-intent automotive enthusiasts.",
       metrics: [
-        { label: "Telemetry Ingestion", value: "3.5B Datapoints" },
-        { label: "Simulation Speed", value: "12x Real-Time" },
-        { label: "Race Energy Yield", value: "+14.8%" },
+        { label: "Conversion Rate Uplift", value: "+210%" },
+        { label: "Cost Per Lead Drop", value: "-52%" },
+        { label: "Paid Media Click-Through", value: "3.8x" },
       ],
       summary:
-        "AdPulse Digital co-engineered the Velocity 2.0 telemetry and digital twin platform for world-championship Formula E electric racing, turning real-time tire, battery, and powertrain dynamics into winning aerodynamic strategies.",
+        "AdPulse Digital engineered the Velocity 2.0 performance marketing framework for motorsport lifestyle brands, turning real-time audience engagement telemetry into dynamic ad creative variations that crushed ROAS benchmarks.",
     },
     {
       id: "story-3",
       type: "interview",
       headline:
-        "Move Fast, Don't Break Things: Balancing AI Innovation with Clinical Continuity at Montefiore Einstein",
+        "Scaling Healthcare Growth: Driving High-Intent Patient Inquiries with AI-Powered SEO",
       authorName: "Deepesh Chandra",
-      authorRole: "SVP & Chief Digital & Information Officer, Montefiore Einstein",
+      authorRole: "SVP & Chief Growth Officer, Montefiore Health",
       image: "/images/success-stories/story-card-3-deepesh-hd.jpg",
       quote:
-        "In healthcare, innovation must never come at the cost of clinical reliability. With AdPulse Digital, we accelerated generative AI adoption while safeguarding critical patient care pathways.",
+        "With AdPulse Digital, our organic visibility for specialized clinical services multiplied 3.4x while lowering patient acquisition costs dramatically.",
       metrics: [
-        { label: "Diagnostic Triage", value: "-40% Wait Time" },
-        { label: "Clinical Compliance", value: "100% HIPAA" },
-        { label: "Physician Adoption", value: "94% Satisfied" },
+        { label: "Organic Search Inflow", value: "+340%" },
+        { label: "Qualified Patient Leads", value: "+160%" },
+        { label: "Patient Acquisition Cost", value: "-45%" },
       ],
       summary:
-        "Deepesh Chandra explores how Montefiore Einstein bridged clinical urgency with enterprise AI maturity, deploying patient-centric algorithmic assistants and secure clinical data fabrics across thousands of healthcare providers.",
+        "Deepesh Chandra explores how Montefiore Health scaled digital patient acquisition through semantic SEO architecture, local search dominance, and trust-centered medical content marketing.",
     },
     {
       id: "story-4",
       type: "interview",
       headline:
-        "Inside the AI Vanguard: Security, Scale and the Future of Intelligence at Cisco",
+        "Inside the Growth Vanguard: Account-Based Marketing (ABM) and Full-Funnel Pipeline Acceleration",
       authorName: "Jeetu Patel",
-      authorRole: "President and Chief Product Officer, Cisco",
+      authorRole: "Head of Global Enterprise Marketing, Tech Vanguard",
       image: "/images/success-stories/story-card-4-jeetu-v5.jpg",
       quote:
-        "Security cannot be an afterthought in enterprise AI—it must be woven into the fabric of every model, network packet, and collaborative interaction.",
+        "AdPulse Digital built an account-based marketing engine that shortened our enterprise deal cycles by 60% and unlocked millions in high-margin pipeline.",
       metrics: [
-        { label: "Threat Detection", value: "<15ms Mean Time" },
-        { label: "Global Footprint", value: "85M Endpoints" },
-        { label: "Zero-Trust Coverage", value: "100% Native" },
+        { label: "Target Account Engagement", value: "84%" },
+        { label: "Enterprise Pipeline Generated", value: "$42M" },
+        { label: "Sales Cycle Velocity", value: "2.5x Faster" },
       ],
       summary:
-        "Jeetu Patel shares Cisco's visionary architectural roadmap on scaling AI workloads securely, unbundling complex telemetry, and establishing sovereign zero-trust defenses across hyper-distributed enterprise networks.",
+        "Jeetu Patel shares how hyper-personalized multi-channel ABM campaigns, precision LinkedIn targeting, and high-impact executive webinars accelerated multi-million dollar enterprise software contracts.",
     },
   ];
 
@@ -230,7 +230,7 @@ export const SuccessStories: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="mb-8 sm:mb-10 max-w-2xl space-y-3">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-zinc-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#01286D] tracking-tight">
             Success Stories
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 font-normal leading-relaxed">
@@ -254,13 +254,13 @@ export const SuccessStories: React.FC = () => {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {displayStories.map((story, idx) => {
-            // Card 2, 6, 8: Split Image + Burgundy Block
+            // Card 2, 6, 8: Split Image + Dark Blue Block
             if (story.type === "split-burgundy") {
               return (
                 <div
                   key={`${story.id}-${idx}`}
                   onClick={() => setSelectedStory(story)}
-                  className="group relative flex flex-col shrink-0 w-[84vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] h-[460px] sm:h-[480px] lg:h-[490px] rounded-none overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-zinc-200/90 bg-[#650025]"
+                  className="group relative flex flex-col shrink-0 w-[84vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] h-[460px] sm:h-[480px] lg:h-[490px] rounded-none overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-zinc-200/90 bg-[#01286D]"
                 >
                   {/* Top Portion (~58%) */}
                   <div className="relative h-[260px] sm:h-[280px] w-full overflow-hidden bg-zinc-950 shrink-0">
@@ -280,8 +280,8 @@ export const SuccessStories: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Bottom Portion (~42%): Solid Deep Burgundy Block */}
-                  <div className="flex-1 bg-[#650025] group-hover:bg-[#52001e] transition-colors duration-300 p-5 sm:p-6 flex flex-col justify-end text-white">
+                  {/* Bottom Portion (~42%): Solid Deep Blue Block */}
+                  <div className="flex-1 bg-[#01286D] group-hover:bg-[#011F54] transition-colors duration-300 p-5 sm:p-6 flex flex-col justify-end text-white">
                     <h3 className="text-lg sm:text-xl font-bold font-heading text-white leading-snug">
                       {story.burgundyTitle}
                     </h3>
@@ -324,7 +324,7 @@ export const SuccessStories: React.FC = () => {
                         {story.authorRole}
                       </p>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-white/20 group-hover:bg-[#ED1B36] text-white flex items-center justify-center shrink-0 transition-colors duration-200">
+                    <div className="w-8 h-8 rounded-full bg-white/20 group-hover:bg-[#FD6E12] text-white flex items-center justify-center shrink-0 transition-colors duration-200">
                       {story.type === "video" ? (
                         <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
                       ) : (
@@ -353,8 +353,8 @@ export const SuccessStories: React.FC = () => {
                 }
               }}
               aria-label={`Go to story ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                activeDot === i ? "w-8 bg-[#ED1B36]" : "w-2 bg-zinc-200 hover:bg-zinc-400"
+              className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
+                activeDot === i ? "w-8 bg-[#FD6E12]" : "w-2 bg-zinc-200 hover:bg-zinc-400"
               }`}
             />
           ))}
@@ -390,14 +390,14 @@ export const SuccessStories: React.FC = () => {
               <button
                 onClick={() => setSelectedStory(null)}
                 aria-label="Close modal"
-                className="absolute top-4 right-4 p-2 rounded-full bg-black/70 hover:bg-[#ED1B36] text-white transition-colors duration-200"
+                className="absolute top-4 right-4 p-2 rounded-full bg-black/70 hover:bg-[#FD6E12] text-white transition-colors duration-200 cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
 
               {/* Title & Badge */}
               <div className="absolute bottom-4 left-6 right-6 space-y-1.5">
-                <span className="inline-block px-2.5 py-0.5 bg-[#ED1B36] text-white text-[10px] font-bold uppercase tracking-wider">
+                <span className="inline-block px-2.5 py-0.5 bg-[#FD6E12] text-white text-[10px] font-bold uppercase tracking-wider">
                   {selectedStory.badge || "FEATURED INTERVIEW"}
                 </span>
                 <h3 className="text-lg sm:text-xl font-bold font-heading text-white leading-snug">
@@ -411,7 +411,7 @@ export const SuccessStories: React.FC = () => {
               {/* Executive Details */}
               {selectedStory.authorName && (
                 <div className="flex items-center gap-3 pb-4 border-b border-zinc-800">
-                  <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-[#ED1B36] font-bold font-heading text-sm">
+                  <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-[#FD6E12] font-bold font-heading text-sm">
                     {selectedStory.authorName.charAt(0)}
                   </div>
                   <div>
@@ -427,7 +427,7 @@ export const SuccessStories: React.FC = () => {
 
               {/* Executive Quote */}
               {selectedStory.quote && (
-                <blockquote className="pl-4 border-l-2 border-[#ED1B36] italic text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                <blockquote className="pl-4 border-l-2 border-[#FD6E12] italic text-xs sm:text-sm text-zinc-300 leading-relaxed">
                   &ldquo;{selectedStory.quote}&rdquo;
                 </blockquote>
               )}
@@ -440,7 +440,7 @@ export const SuccessStories: React.FC = () => {
                       key={idx}
                       className="bg-zinc-900/80 p-3.5 border border-zinc-800/80 rounded-none"
                     >
-                      <div className="text-lg sm:text-xl font-black font-heading text-[#ED1B36]">
+                      <div className="text-lg sm:text-xl font-black font-heading text-[#FD6E12]">
                         {m.value}
                       </div>
                       <div className="text-[11px] text-zinc-400 mt-0.5">

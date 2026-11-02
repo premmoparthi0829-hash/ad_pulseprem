@@ -69,12 +69,12 @@ export const approachSteps: ApproachStep[] = [
 ];
 
 export const bigThinkersProfile: LeaderProfile = {
-  name: "ELENA ROSTOVA, PH.D.",
-  role: "Chief Innovation Officer & Executive Vice President",
-  credentials: "Former VP Digital Architecture at Global Tech Corp • MIT AI Fellow",
+  name: "ELENA ROSTOVA",
+  role: "Chief Growth Officer & Executive Vice President",
+  credentials: "Former VP Global Marketing at Tech Unicorn • Cannes Lions Grand Prix Winner",
   quote:
-    "Real digital transformation isn't about chasing transient trends or slapping AI on decaying legacy systems. It is about architectural clarity: building fast, intelligent digital foundations that allow an enterprise to out-maneuver the competition for the next twenty years.",
-  bio: "With over 18 years leading digital engineering initiatives across North America and Europe, Dr. Rostova spearheads AdPulse Digital’s applied AI research, enterprise architecture design, and strategic corporate transformation programs.",
+    "Real digital marketing isn't about chasing vanity impressions or burning budget on generic ads. It is about mathematical precision and creative resonance: building full-funnel growth engines that turn customer attention into predictable, compounding revenue.",
+  bio: "With over 18 years leading digital marketing and growth initiatives across North America and Europe, Elena spearheads AdPulse Digital’s performance marketing engineering, SEO dominance, and high-impact brand creative campaigns.",
   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&auto=format&fit=crop&q=85",
 };
 
@@ -82,37 +82,37 @@ export const whatsNewItems: NewsItem[] = [
   {
     id: "news-1",
     date: "OCTOBER 2026",
-    category: "GLOBAL EXPANSION",
-    title: "AdPulse Digital Launches Next-Gen AI Innovation Hub in Singapore",
+    category: "AI MARKETING",
+    title: "AdPulse Digital Launches Predictive Performance Media Engine for Global Brands",
     description:
-      "Expanding our Asia-Pacific presence with a dedicated 120-person center of excellence focusing on sovereign enterprise AI and composable commerce architectures.",
+      "Deploying real-time algorithmic bidding and automated creative variations to drive up to 4.8x ROAS across Meta, Google, and programmatic networks.",
     linkText: "Read Press Release",
   },
   {
     id: "news-2",
     date: "SEPTEMBER 2026",
     category: "INDUSTRY RECOGNITION",
-    title: "Named Global Leader in Enterprise Digital Strategy by TechInnovate Awards",
+    title: "Ranked #1 Digital Marketing & Growth Agency for Enterprise ROAS Delivery",
     description:
-      "Recognized for delivering exceptional omnichannel revenue growth and sub-second web performance across multi-billion dollar enterprise clients.",
+      "Recognized for delivering outstanding omnichannel customer acquisition growth and market-leading search engine dominance.",
     linkText: "View Recognition",
   },
   {
     id: "news-3",
     date: "AUGUST 2026",
     category: "RESEARCH REPORT",
-    title: "The 2027 State of Enterprise Headless Web Architecture Published",
+    title: "The 2027 State of Generative Search Optimization (GEO) & SEO Published",
     description:
-      "Our proprietary benchmarking study analyzing over 400 global enterprises transitioning from legacy monoliths to edge-first web platforms.",
+      "Our proprietary benchmarking study analyzing over 400 global enterprises optimizing for both Google search and generative AI search engines.",
     linkText: "Download Report",
   },
   {
     id: "news-4",
     date: "JULY 2026",
     category: "STRATEGIC PARTNERSHIP",
-    title: "AdPulse Digital Announces Premier Cloud Partnership with Leading Edge Networks",
+    title: "AdPulse Digital Named Meta & Google Premier Growth Partner for 2026",
     description:
-      "Enabling instant micro-second global content rendering and automated SOC2-compliant data residency across 45 regions.",
+      "Deepening alpha API access for server-side attribution, first-party customer telemetry, and dynamic creative testing pipelines.",
     linkText: "Learn More",
   },
 ];

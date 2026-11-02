@@ -84,7 +84,7 @@ export const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
   };
 
   return (
-    <section id="contact-form" className="py-20 lg:py-28 bg-[#5F0022] text-white">
+    <section id="contact-form" className="py-20 lg:py-28 bg-[#01286D] text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Column: Heading */}
@@ -120,7 +120,7 @@ export const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                 <div className="pt-2">
                   <button
                     onClick={() => setStatus("idle")}
-                    className="text-xs font-bold text-white underline hover:text-[#ED1B36] uppercase tracking-wider"
+                    className="text-xs font-bold text-white underline hover:text-[#FD6E12] uppercase tracking-wider cursor-pointer"
                   >
                     Submit Another Enquiry →
                   </button>
@@ -311,7 +311,7 @@ export const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="px-8 py-3.5 bg-white hover:bg-[#ED1B36] text-[#5F0022] hover:text-white font-extrabold text-xs uppercase tracking-widest transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="px-8 py-3.5 bg-white hover:bg-[#FD6E12] text-[#01286D] hover:text-white font-extrabold text-xs uppercase tracking-widest transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     {loading ? (
                       <>

@@ -6,7 +6,7 @@ import { bigThinkersProfile } from "@/data/company";
 
 export const BigThinkers: React.FC = () => {
   return (
-    <section id="big-thinkers" className="py-20 lg:py-28 bg-deep-burgundy text-white relative overflow-hidden border-b border-rose-950">
+    <section id="big-thinkers" className="py-20 lg:py-28 bg-[#01286D] text-white relative overflow-hidden border-b border-blue-950">
       {/* Background isometric mesh */}
       <div className="absolute inset-0 bg-isometric-grid opacity-15 pointer-events-none" />
 
@@ -14,19 +14,19 @@ export const BigThinkers: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Editorial Content & Quote */}
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#ED1B36] block">
+            <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#FD6E12] block">
               THE BIG THINKERS • LEADERSHIP PERSPECTIVE
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading leading-tight tracking-tight text-white">
               Creative Minds. Bold Ideas. <br />
-              <span className="text-rose-200">Real Digital Impact.</span>
+              <span className="text-orange-200">Real Digital Impact.</span>
             </h2>
 
             {/* Quote Block with decorative mark */}
-            <div className="relative pl-6 border-l-2 border-[#ED1B36] my-6 space-y-3">
-              <Quote className="w-8 h-8 text-[#ED1B36]/60 absolute -top-4 -left-2 fill-current opacity-30" />
-              <p className="text-lg sm:text-xl text-rose-100 font-medium italic leading-relaxed">
+            <div className="relative pl-6 border-l-2 border-[#FD6E12] my-6 space-y-3">
+              <Quote className="w-8 h-8 text-[#FD6E12]/60 absolute -top-4 -left-2 fill-current opacity-30" />
+              <p className="text-lg sm:text-xl text-blue-100 font-medium italic leading-relaxed">
                 &ldquo;{bigThinkersProfile.quote}&rdquo;
               </p>
             </div>
@@ -36,16 +36,16 @@ export const BigThinkers: React.FC = () => {
               <h3 className="text-xl font-bold font-heading text-white">
                 {bigThinkersProfile.name}
               </h3>
-              <p className="text-sm font-semibold text-[#ED1B36] uppercase tracking-wider">
+              <p className="text-sm font-semibold text-[#FD6E12] uppercase tracking-wider">
                 {bigThinkersProfile.role}
               </p>
-              <p className="text-xs text-rose-200/80">
+              <p className="text-xs text-blue-200/80">
                 {bigThinkersProfile.credentials}
               </p>
-              <p className="text-xs text-rose-100/70 pt-2 leading-relaxed">
+              <p className="text-xs text-blue-100/70 pt-2 leading-relaxed">
                 {bigThinkersProfile.bio}
               </p>
-              <p className="text-[10px] text-rose-300/40 italic pt-1">
+              <p className="text-[10px] text-blue-300/40 italic pt-1">
                 * Illustrative enterprise leadership profile. Actual executive profiles dynamically mapped via CMS.
               </p>
             </div>
@@ -70,7 +70,7 @@ export const BigThinkers: React.FC = () => {
                   clipPath: "polygon(0 0, 95% 0, 100% 100%, 0% 100%)",
                 }}
               >
-                <div className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-widest text-[#ED1B36]">
+                <div className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-widest text-[#FD6E12]">
                   <ShieldCheck className="w-3.5 h-3.5" />
                   Executive Board Member
                 </div>

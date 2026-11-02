@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
 interface CapabilityItem {
   id: string;
@@ -12,59 +13,59 @@ interface CapabilityItem {
 
 const capabilitiesList: CapabilityItem[] = [
   {
-    id: "ai",
-    title: "Artificial Intelligence",
+    id: "performance-marketing",
+    title: "Performance Marketing & Paid Media",
     description:
-      "Transforming enterprise core operations with bespoke cognitive LLMs, autonomous agentic workflows, and real-time predictive analytics.",
-    image: "/images/capabilities/ai.jpg",
-  },
-  {
-    id: "cloud",
-    title: "Cloud and Infrastructure Services",
-    description:
-      "Engineering resilient multi-cloud architectures, edge cloud distribution, and autonomous infrastructure management.",
-    image: "/images/capabilities/cloud.jpg",
-  },
-  {
-    id: "digital-apps",
-    title: "Digital Enterprise Applications",
-    description:
-      "Modernizing core mission-critical ERP, CRM, and cloud-native business applications for compounding enterprise agility.",
+      "Algorithmic paid search, Meta, LinkedIn, and programmatic DSP campaigns engineered to maximize ROAS and customer acquisition velocity.",
     image: "/images/capabilities/digital-apps.jpg",
   },
   {
-    id: "bps",
-    title: "Business Process Services",
+    id: "seo",
+    title: "Search Engine Optimization (SEO & AI GEO)",
     description:
-      "Reimagining enterprise operations with intelligent cognitive process automation, digital customer engagement, and analytics.",
-    image: "/images/capabilities/bps.jpg",
-  },
-  {
-    id: "engineering",
-    title: "Engineering Services",
-    description:
-      "Accelerating embedded software development, IoT systems engineering, and smart connected product engineering.",
-    image: "/images/capabilities/engineering.jpg",
-  },
-  {
-    id: "consulting",
-    title: "AdPulse Consulting",
-    description:
-      "Strategic digital transformation advisory, cloud modernization roadmaps, and business model reinvention.",
-    image: "/images/capabilities/consulting.jpg",
-  },
-  {
-    id: "experience",
-    title: "Experience Services",
-    description:
-      "Crafting frictionless, data-driven omni-channel customer experiences and immersive digital product design.",
+      "Technical SEO architecture, generative AI search optimization, semantic content clusters, and high-authority link networks.",
     image: "/images/capabilities/experience.jpg",
   },
   {
-    id: "network",
-    title: "Network Services",
+    id: "social-media",
+    title: "Social Media & Creator Strategy",
     description:
-      "Deploying next-generation 5G private networks, software-defined WAN, and hyper-connected telecom infrastructure.",
+      "Viral social storytelling, influencer ecosystems, executive personal branding, and high-engagement multi-channel community management.",
+    image: "/images/capabilities/cloud.jpg",
+  },
+  {
+    id: "content-marketing",
+    title: "Content Strategy & Copywriting",
+    description:
+      "Compelling brand narratives, high-converting direct response copy, editorial whitepapers, and thought-leadership video assets.",
+    image: "/images/capabilities/consulting.jpg",
+  },
+  {
+    id: "cro",
+    title: "Conversion Rate Optimization (CRO)",
+    description:
+      "Systematic multivariate A/B testing, user journey heatmapping, and high-converting landing page experiences that eliminate bounce.",
+    image: "/images/capabilities/bps.jpg",
+  },
+  {
+    id: "ai-automation",
+    title: "AI Marketing Automation & CRM",
+    description:
+      "Intelligent lifecycle email funnels, predictive churn scoring, lead scoring algorithms, and autonomous multi-touch nurture workflows.",
+    image: "/images/capabilities/ai.jpg",
+  },
+  {
+    id: "brand-design",
+    title: "Brand Identity & Ad Creative Design",
+    description:
+      "Magnetic brand positioning, 3D motion design, high-converting ad visuals, and comprehensive corporate design systems.",
+    image: "/images/capabilities/engineering.jpg",
+  },
+  {
+    id: "web-growth",
+    title: "E-Commerce & Web Growth Engineering",
+    description:
+      "Ultra-fast headless storefronts, pixel tracking architectures, server-side CAPI attribution, and conversion-optimized web platforms.",
     image: "/images/capabilities/network.jpg",
   },
 ];
@@ -88,7 +89,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ onSelectService }) =
   return (
     <section
       id="capabilities"
-      className="relative bg-[#55001f] text-white py-12 lg:py-16 overflow-hidden select-none"
+      className="relative bg-[#01286D] text-white py-12 lg:py-16 overflow-hidden select-none"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         {/* 
@@ -97,14 +98,23 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ onSelectService }) =
           ======================================================================
         */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-8 lg:mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black font-heading tracking-tight text-white leading-none">
-            Capabilities
-          </h2>
+          <div>
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black font-heading tracking-tight text-white leading-none">
+              Digital Marketing Capabilities
+            </h2>
+            <Link
+              href="/capabilities"
+              className="text-xs font-bold uppercase tracking-wider text-orange-200 hover:text-[#FD6E12] mt-2 inline-flex items-center gap-1 group"
+            >
+              <span>Explore All 8 Practice Portals</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
           <p className="text-xs sm:text-[13px] text-zinc-300 font-normal leading-relaxed max-w-sm">
-            We bring the solutions and platforms that actually move the needle. Better
-            customer experiences. Real business outcomes. Transformation that happens
-            at the pace your business demands.
+            We deliver full-funnel digital marketing solutions that reliably move the needle:
+            higher ROAS, organic search dominance, viral social engagement, and compounding
+            customer lifetime value.
           </p>
         </div>
 
@@ -123,26 +133,29 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ onSelectService }) =
                 <div
                   key={item.id}
                   onMouseEnter={() => setActiveIdx(idx)}
-                  onClick={() => {
-                    setActiveIdx(idx);
-                    handleItemClick(item.title);
-                  }}
                   className={`w-full text-left px-4 py-2.5 sm:py-3 transition-all duration-200 flex items-center justify-between cursor-pointer group ${
                     isActive
-                      ? "bg-[#7c002c] text-white font-bold"
+                      ? "bg-[#011E52] text-white font-bold"
                       : "text-white/85 hover:text-white hover:bg-white/5 font-normal"
                   }`}
                 >
-                  <span className="text-sm sm:text-base lg:text-[17px] font-heading tracking-normal">
+                  <Link
+                    href={`/capabilities/${item.id}`}
+                    className="flex-1 text-sm sm:text-base lg:text-[17px] font-heading tracking-normal hover:underline"
+                  >
                     {item.title}
-                  </span>
+                  </Link>
 
-                  {/* Active Red Circular Arrow Button */}
-                  {isActive && (
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#ED1B36] flex items-center justify-center text-white shrink-0 ml-3 shadow-sm transform transition-transform group-hover:translate-x-0.5">
-                      <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                    </div>
-                  )}
+                  {/* Active Link Button to Practice Page */}
+                  <Link
+                    href={`/capabilities/${item.id}`}
+                    aria-label={`Explore ${item.title}`}
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0 ml-3 shadow-sm transform transition-transform group-hover:scale-110 ${
+                      isActive ? "bg-[#FD6E12]" : "bg-white/20 group-hover:bg-[#FD6E12]"
+                    }`}
+                  >
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
               );
             })}
@@ -150,7 +163,7 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ onSelectService }) =
 
           {/* Right Column: Dynamic Ultra-HD Showcase Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[460px] aspect-[482/458] overflow-hidden shadow-2xl bg-black">
+            <div className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[460px] aspect-[482/458] overflow-hidden shadow-2xl bg-black group">
               {capabilitiesList.map((item, idx) => {
                 const isActive = idx === activeIdx;
                 return (
@@ -169,6 +182,31 @@ export const Capabilities: React.FC<CapabilitiesProps> = ({ onSelectService }) =
                       priority={idx === 0}
                       className="object-cover object-center"
                     />
+
+                    {/* Gradient Overlay with Interactive Button */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 via-55% to-transparent flex flex-col justify-end p-6 sm:p-7 space-y-3">
+                      <div>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-[#FD6E12] block mb-1">
+                          SPECIALIZED PRACTICE
+                        </span>
+                        <h3 className="text-xl sm:text-2xl font-black font-heading text-white leading-tight">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-zinc-300 line-clamp-2 mt-1.5 font-normal">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div className="pt-1">
+                        <Link
+                          href={`/capabilities/${item.id}`}
+                          className="px-5 py-2.5 bg-[#FD6E12] hover:bg-[#e05e0c] text-white text-xs font-bold uppercase tracking-widest transition-all duration-200 inline-flex items-center gap-2 shadow-md cursor-pointer"
+                        >
+                          <span>EXPLORE PRACTICE</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
